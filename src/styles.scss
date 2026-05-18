@@ -8,22 +8,73 @@
 
 } 
 
+@font-face {
+    font-family: "BricolageGrotesque-Bold";
+    src: url(../public/assets/fonts/BricolageGrotesque-Bold.ttf);
+}
+
+@font-face {
+    font-family: "BricolageGrotesque-Medium";
+    src: url(../public/assets/fonts/BricolageGrotesque-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Kalam-Regular";
+    src: url(../public/assets/fonts/Kalam-Regular.ttf);
+}
+
 body,
-* {
+html {
     margin: 0;
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 a{
+    font-family: "BricolageGrotesque-Medium";
+    font-size: 1.8rem;
     text-decoration: none;
-    color: var(--textcolor);
-    
+    color: var(--textcolor_white);
+    cursor: pointer;
     & :hover{
         text-decoration: underline;
     }
 }
 
+button{
+    font-family: "BricolageGrotesque-Medium";
+    font-size: 1.6rem;
+    text-decoration: none;
+    border-width: 0;
+    cursor: pointer;
+     & :hover{
+        text-decoration: underline;
+    }
+}
+
 p{
-    font-size: 2rem;
-    color: var(--textcolor);
+    font-family: "BricolageGrotesque-Medium";
+    font-size: 1.6rem;
+    color: var(--textcolor_white);
+}
+
+h1{
+    font-family: "BricolageGrotesque-Bold";
+    font-size: 12.8rem;
+    color: #F8F9FA;
+    margin: 0;
+}
+
+h2{
+    font-family: "BricolageGrotesque-Bold";
+    font-size: 7.8rem;
+    color: #F8F9FA;
+    margin: 0;
+}
+
+h3{
+    font-family: "BricolageGrotesque-Medium";
+    font-size: 6.2rem;
+    color: #F8F9FA;
+    margin: 0;
 }

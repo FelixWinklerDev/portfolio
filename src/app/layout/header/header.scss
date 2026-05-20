@@ -11,6 +11,13 @@
   width: 80px;
 }
 
+.icons {
+  height: 32px;
+  width: 32px;
+  border: solid 1px var(--border);
+  border-radius: 16px;
+}
+
 .d-flex {
   display: flex;
 }
@@ -63,6 +70,17 @@
   rotate: 8deg;
 }
 
+.felix {
+  filter: grayscale(1);
+  height: 160px;
+  width: 170px;
+  rotate: 8deg;
+  transform: translate(-187px, -25px);
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
 .dark-bg-btn {
   border: solid 1px var(--border);
   border-radius: 100px;
@@ -85,11 +103,11 @@
   justify-content: center;
   margin-left: 45px;
   gap: 5px;
-  transform: translateY(-50px);
+  transform: translate(-2px, -75px);
 }
 
 .social-media-link {
-  width: 40px;
+  width: 32px;
 }
 
 .in-touch {
@@ -101,6 +119,6 @@
   font-family: 'Kalam-Regular';
   font-size: 2.4rem;
   rotate: 8deg;
-  transform: translateY(-65px);
+  transform: translateY(-55px);
   margin-left: 37px;
 }

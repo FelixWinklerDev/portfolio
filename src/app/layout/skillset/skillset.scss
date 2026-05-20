@@ -1,0 +1,110 @@
+.skill-wrapper {
+  background-image: url(/assets/img/skills_bg.png);
+  background-size: cover;
+  background-position: top;
+  height: 800px;
+  padding-top: 144px;
+  padding-bottom: 144px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.content {
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 48px;
+  gap: 48px;
+}
+
+.skill {
+  gap: 48px;
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon-wrapper {
+  gap: 35px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 600px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.right-bound {
+  justify-content: right;
+}
+
+.skillset {
+  flex-direction: column;
+  gap: 8px;
+}
+
+.paper-size {
+  height: 140px;
+  width: 640px;
+  transform: translateY(50px);
+}
+
+.paper-txt {
+  font-size: 1.8rem;
+  color: var(--textcolor_black);
+  transform: translateY(-60px);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.icon {
+  height: 72px;
+  width: 72px;
+  filter: grayscale(1);
+  &:hover {
+    transition: all ease-in-out 100ms;
+    filter: grayscale(0);
+    transform: scale(0.8);
+  }
+}
+
+.arrow {
+  height: 40px;
+  width: 50px;
+}
+
+.filler {
+  height: 100%;
+  width: 200px;
+}
+
+.post-it {
+  rotate: 8deg;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+  justify-content: start;
+}
+
+.on-post-it {
+  z-index: 101;
+  transform: translate(-185px, 25px);
+}
+
+.surprise {
+  height: 190px;
+  width: 190px;
+  background-image: linear-gradient(180deg, #fcc92c, orangered, #fcc92c);
+  border-radius: 15px;
+  transform: translate(-400px);
+}
+
+.peel-txt {
+  font-size: 3rem;
+  font-family: 'Kalam-Regular';
+  width: 180px;
+}

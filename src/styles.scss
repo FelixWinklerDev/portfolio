@@ -3,6 +3,7 @@
   --slider: #f87a55;
   --sliderball: #3355ff;
   --border: #f8f9fa;
+  --border-black: #0e1013;
   --textcolor_white: #f8f9fa;
   --textcolor_black: #0e1013;
 }
@@ -59,21 +60,24 @@ p {
 
 h1 {
   font-family: 'BricolageGrotesque-Bold';
-  font-size: 12.8rem;
+  font-size: 10.8rem;
   color: var(--textcolor_white);
-  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 h2 {
   font-family: 'BricolageGrotesque-Bold';
   font-size: 6.4rem;
   color: var(--textcolor_white);
-  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 h3 {
   font-family: 'BricolageGrotesque-Medium';
   font-size: 2rem;
   color: var(--textcolor_white);
-  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }

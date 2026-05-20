@@ -1,5 +1,5 @@
 .hero {
-  height: 115vh;
+  height: 105vh;
   width: 100%;
   background-image: url(/assets/img/header_bg.png);
   background-size: cover;
@@ -22,13 +22,14 @@
 .centered {
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  transform: translateY(65px);
+  gap: 50px;
+  transform: translateY(30px);
 }
 
 .right-bound {
   justify-content: right;
-  margin-right: 210px;
+  margin-right: 200px;
+  transform: translateY(-30px);
 }
 
 .color-change-if-active {
@@ -71,6 +72,12 @@
   padding-left: 24px;
   background-color: rgba($color: #000000, $alpha: 0);
   color: var(--textcolor_white);
+  &:hover {
+    background-color: var(--slider);
+    box-shadow: none;
+    transform: scale(0.9);
+    transition: all ease-in 300ms;
+  }
 }
 
 .socialmedia {
@@ -78,17 +85,15 @@
   justify-content: center;
   margin-left: 45px;
   gap: 5px;
+  transform: translateY(-50px);
+}
+
+.social-media-link {
+  width: 40px;
 }
 
 .in-touch {
   box-shadow: 3px 3px 1px var(--border);
-  transform: scale(1.1);
-  & :hover {
-    background-color: var(--slider);
-    box-shadow: none;
-    transform: scale(1);
-    transition: all ease-in 300ms;
-  }
 }
 
 .polaroid-txt {

@@ -1,0 +1,61 @@
+.project-wrapper {
+  width: 100%;
+  padding-top: 144px;
+  flex-wrap: wrap;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.black-txt {
+  color: black;
+}
+
+.sub-txt {
+  font-family: 'BricolageGrotesque-Regular';
+  font-size: 1.8rem;
+}
+
+.sticker {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  transform: translate(60px);
+  z-index: 1000;
+}
+
+.laptop {
+  position: relative;
+  z-index: 10;
+  height: 300px;
+  width: 400px;
+  animation: bounce 3.5s ease infinite;
+  transform: translateZ(0);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-50px);
+  }
+  60% {
+    transform: translateY(-25px);
+  }
+}
+
+.title-join {
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.column {
+  flex-direction: column;
+}

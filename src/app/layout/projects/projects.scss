@@ -1,15 +1,34 @@
-.project-wrapper {
-  width: 100%;
-  padding-top: 144px;
-  flex-wrap: wrap;
-}
-
 .d-flex {
   display: flex;
 }
 
+.wrapper {
+  width: 100%;
+  padding-top: 120px;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
 .black-txt {
-  color: black;
+  color: var(--textcolor_black);
+}
+
+.headline {
+  width: 260px;
+  height: 20px;
+  animation-name: slideLeftAnimation;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+
+.sub-header {
+  font-family: 'BricolageGrotesque-Regular';
 }
 
 .sub-txt {
@@ -17,11 +36,16 @@
   font-size: 1.8rem;
 }
 
+.positioning {
+  width: 560px;
+  gap: 48px;
+}
+
 .sticker {
   position: relative;
-  height: 100px;
-  width: 100px;
-  transform: translate(60px);
+  height: 130px;
+  width: 130px;
+  transform: translate(0, -120px);
   z-index: 1000;
 }
 
@@ -32,6 +56,40 @@
   width: 400px;
   animation: bounce 3.5s ease infinite;
   transform: translateZ(0);
+  margin-left: 50px;
+}
+
+.project-image {
+  height: 320px;
+  width: 430px;
+  border-radius: 15px;
+  border: 1px solid var(--textcolor_black);
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0px 40px 80px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.projects {
+  height: 100%;
+  width: 100%;
+}
+
+.dark-bg-btn {
+  border: solid 1px var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+  padding: 6px 12px;
+  background-color: rgba(#000000, 0);
+  color: var(--textcolor_white);
+  z-index: 1000;
+  box-shadow: 3px 3px 1px var(--border);
+  transform: translate(250px, -50px);
+  &:hover {
+    background-color: var(--slider);
+    box-shadow: none;
+    transition: all ease-in 300ms;
+  }
 }
 
 @keyframes bounce {
@@ -50,12 +108,14 @@
   }
 }
 
-.title-join {
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
-}
-
-.column {
-  flex-direction: column;
+@keyframes slideLeftAnimation {
+  0%,
+  80% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

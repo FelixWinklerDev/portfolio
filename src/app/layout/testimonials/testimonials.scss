@@ -1,0 +1,76 @@
+.d-flex {
+  display: flex;
+}
+
+.space {
+  justify-content: space-around;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  filter: brightness(0);
+}
+
+.black-txt {
+  color: var(--textcolor_black);
+}
+
+.sub-txt {
+  font-family: 'BricolageGrotesque-Regular';
+  font-size: 1.8rem;
+}
+
+.arrow {
+  width: 100px;
+  height: 36px;
+}
+
+.header-testimonial {
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  margin-bottom: 48px;
+  padding-right: 60px;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 144px 0;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-image: url(/assets/img/testimonial-paper.png);
+  background-size: 620px 420px;
+  background-repeat: no-repeat;
+  border: solid 1px var(--textcolor_black);
+  border-radius: 15px;
+  padding: 50px;
+}
+
+.left {
+  rotate: -4deg;
+  z-index: 3;
+  transform: translateX(100px);
+  &:hover {
+    z-index: 5;
+  }
+}
+
+.mid {
+  z-index: 2;
+  &:hover {
+    z-index: 5;
+  }
+}
+
+.right {
+  rotate: 4deg;
+  z-index: 1;
+  transform: translateX(-100px);
+  &:hover {
+    z-index: 5;
+  }
+}

@@ -6,6 +6,7 @@
   --border-black: #0e1013;
   --textcolor_white: #f8f9fa;
   --textcolor_black: #0e1013;
+  --hover_logo: #f6c418;
 }
 
 @font-face {
@@ -85,4 +86,10 @@ h3 {
   color: var(--textcolor_white);
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+label{
+  font-family: 'BricolageGrotesque-Medium';
+  font-size: 1.8rem;
+  color: var(--textcolor_white);
 }

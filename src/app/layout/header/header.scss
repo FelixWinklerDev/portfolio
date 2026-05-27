@@ -9,6 +9,10 @@
 .logo {
   height: 80px;
   width: 80px;
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(17%) saturate(2986%) hue-rotate(357deg)
+      brightness(103%) contrast(105%);
+  }
 }
 
 .icons {
@@ -71,8 +75,8 @@
   &:hover {
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    transition: background-position 3s ease-in;
+    transform-origin: top;
+    transition: transform 3s ease-in;
   }
 }
 
@@ -149,6 +153,16 @@
   z-index: 1;
 }
 
+.on-touch {
+  box-shadow: 3px 3px 1px var(--border);
+  &:hover {
+    background-color: var(--slider);
+    box-shadow: none;
+    transform: scale(0.9);
+    transition: all ease-in 300ms;
+  }
+}
+
 .roll-in {
   animation: roll-in 2s ease infinite;
 }
@@ -175,16 +189,6 @@
 .social-media-link {
   width: 35px;
   overflow: hidden;
-}
-
-.in-touch {
-  box-shadow: 3px 3px 1px var(--border);
-  &:hover {
-    background-color: var(--slider);
-    box-shadow: none;
-    transform: scale(0.9);
-    transition: all ease-in 300ms;
-  }
 }
 
 .polaroid-txt {

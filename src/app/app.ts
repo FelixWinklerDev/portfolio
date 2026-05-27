@@ -9,9 +9,17 @@ import { ContactMe } from './layout/contact-me/contact-me';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, AboutMe, Skillset, Projects, Testimonials, ContactMe],
+  imports: [
+    RouterOutlet,
+    Header,
+    AboutMe,
+    Skillset,
+    Projects,
+    Testimonials,
+    ContactMe,
+  ],
   templateUrl: './app.html',
-  styleUrls: ['./app.scss']
+  styleUrls: ['./app.scss'],
 })
 export class App {
   protected readonly title = signal('portfolio');

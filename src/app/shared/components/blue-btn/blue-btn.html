@@ -1,2 +1,8 @@
-<img class="hand" src="/assets/icons/waving_hand.png" alt="">
-<button class="waving-btn">Hello World</button>
+<div class="column">
+  <img class="icon" [src]="data.pic" alt="waving hand" />
+  <button class="waving-btn">
+    <span class="inline-txt" [attr.data-hover]="'I\'M FELIX WINKLER'">
+      {{ data.text }}
+    </span>
+  </button>
+</div>

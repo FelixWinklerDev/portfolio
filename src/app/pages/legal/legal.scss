@@ -1,0 +1,126 @@
+.hero {
+  height: 110vh;
+  width: 100%;
+  background-image: url(/assets/img/header_bg.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(17%) saturate(2986%) hue-rotate(357deg)
+      brightness(103%) contrast(105%);
+  }
+}
+
+.main-sections {
+  font-family: 'BricolageGrotesque-Bold';
+  font-size: 4rem;
+  margin-block-start: 0.8rem;
+  margin-block-end: 0.8rem;
+}
+
+.icons {
+  height: 32px;
+  width: 32px;
+  border: solid 1px var(--border);
+  border-radius: 16px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.space-around {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.right {
+  width: 100%;
+  justify-content: right;
+}
+
+.black-txt {
+  color: var(--textcolor_black);
+}
+
+.center {
+  padding: 144px 120px;
+}
+
+.color-change-if-active {
+  color: orange;
+}
+
+.slider {
+  width: 40px;
+  height: 20px;
+}
+
+.slider-position {
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar {
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+.nav-link {
+  position: relative;
+  padding: 15px 30px;
+  z-index: 1;
+  &:hover {
+    background-size: cover;
+    background-position: center;
+    transform-origin: top;
+    transition: transform 3s ease-in;
+  }
+}
+
+.footer {
+  justify-content: space-evenly;
+  align-items: end;
+  padding: 0 20px 20px 20px;
+}
+
+.legal {
+  width: 200px;
+}
+
+.about-me:hover {
+  background-image: url(/assets/icons/aboutme_header_animation.png);
+}
+
+.skills:hover {
+  background-image: url(/assets/icons/skill_header_animation.png);
+}
+
+.projects:hover {
+  background-image: url(/assets/icons/projekt_header_animation.png);
+}
+
+.contact-me:hover {
+  background-image: url(/assets/icons/contact_header_animation.png);
+}
+
+.imprint-link {
+  color: var(--sliderball);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.important-words {
+  color: var(--sliderball);
+}

@@ -20,6 +20,13 @@
   color: var(--textcolor_black);
 }
 
+.centered{
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .wrapper {
   width: 100%;
   min-height: 100vh;

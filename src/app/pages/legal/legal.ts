@@ -1,9 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-legal',
+  standalone: true,
   imports: [],
   templateUrl: './legal.html',
   styleUrl: './legal.scss',
 })
-export class Legal {}
+export class Legal {
+  @Output() close = new EventEmitter<void>();
+}

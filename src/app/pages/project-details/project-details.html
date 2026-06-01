@@ -12,16 +12,39 @@
     </div>
   </nav>
   <div class="d-flex center-btn">
-    <img class="arrow" src="/assets/icons/back-project-details-arrow.png" alt="arrow icon" />
-    <button class="back-btn" id="backButton">Go Back</button>
+    <img class="arrow" src="/assets/icons/back-project-details-arrow.png" alt="arrow icon left" />
+    <button class="back-btn" id="backButton" (click)="close.emit()">Go Back</button>
   </div>
-  <section>
-    <div>
-      <h2>{{ project?.name }}</h2>
-      <p>{{ project?.description }}</p>
-      <p>{{ project?.details }}</p>
-      <p>Duration: {{ project?.duration }} weeks</p>
-      <p>Technologies: {{ project?.technologies }}</p>
+  <section class="details-wrapper d-flex">
+    <div class="content">
+      <div class="project-name-wrapper">
+        <h2 class="black-txt">{{ project?.name }}</h2>
+        <img class="underline" src="/assets/img/underline-projectname.png" alt="underline" />
+      </div>
+      <h3 class="black-txt">Description</h3>
+      <p class="black-txt">{{ project?.description }}</p>
+      <h3 class="black-txt">Implementation Details</h3>
+      <p class="black-txt">{{ project?.details }}</p>
+      <p class="black-txt">Duration: {{ project?.duration }} weeks</p>
+      <p class="black-txt">Technologies: {{ project?.technologies }}</p>
+    </div>
+    <div class="content">
+      <div class="d-flex">
+        <img class="project-preview" src="{{ project?.img }}" alt="preview image of the project" />
+        <img class="sticker" src="{{ project?.sticker }}" alt="sticker image" />
+      </div>
+      <div class="right d-flex gap">
+        <a class="transparent-btn" href="{{ project?.github }}" target="_blank">GitHub</a>
+        <a class="transparent-btn" href="{{ project?.livetest }}" target="_blank">Live Test</a>
+      </div>
+      <div class="d-flex center-btn right">
+        <button class="next-btn" id="nextButton" (click)="next.emit()">Next Project</button>
+        <img
+          class="arrow-right"
+          src="/assets/icons/next-project-details-arrow.png"
+          alt="arrow icon right"
+        />
+      </div>
     </div>
   </section>
 </main>

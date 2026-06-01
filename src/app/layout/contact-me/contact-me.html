@@ -62,7 +62,7 @@
     <div class="column d-flex legal">
       <img class="logo-footer" src="/assets/icons/logo.png" alt="logo image" />
       <p>&copy; Felix Winkler 2026</p>
-      <a routerLink="legal" target="_blank">Legal Notice</a>
+      <a href="#" (click)="openDialog($event)">Legal Notice</a>
     </div>
     <div class="space-around d-flex">
       <a href="https://github.com/FelixWinklerDev">GitHub</a>
@@ -71,3 +71,6 @@
     </div>
   </footer>
 </section>
+<dialog #legalDialog>
+  <app-legal (close)="closeDialog()"></app-legal>
+</dialog>

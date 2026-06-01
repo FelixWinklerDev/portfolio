@@ -8,6 +8,8 @@ export interface Project {
   technologies: string;
   img: string;
   sticker: string;
+  github: string;
+  livetest: string;
 }
 
 @Component({
@@ -19,4 +21,5 @@ export interface Project {
 export class ProjectDetails {
   @Input() project: Project | null = null;
   @Output() close = new EventEmitter<void>();
+  @Output() next = new EventEmitter<void>();
 }

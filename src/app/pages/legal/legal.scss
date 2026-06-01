@@ -1,5 +1,5 @@
 .hero {
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   background-image: url(/assets/img/header_bg.png);
   background-size: cover;
@@ -123,4 +123,40 @@
 
 .important-words {
   color: var(--sliderball);
+}
+
+.close-legal {
+  position: relative;
+  border: solid 1px var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+  padding: 12px 24px;
+  background-color: var(--transparence);
+  color: var(--textcolor_white);
+  z-index: 1;
+  box-shadow: 3px 3px 1px var(--border);
+  &:hover {
+    background-color: var(--slider);
+    box-shadow: none;
+    transform: scale(0.9);
+    transition: all ease-in 300ms;
+  }
+}
+
+.close-legal-down{
+  position: relative;
+  border: solid 1px var(--textcolor_black);
+  border-radius: 100px;
+  overflow: hidden;
+  padding: 12px 24px;
+  background-color: var(--transparence);
+  color: var(--textcolor_black);
+  z-index: 1;
+  box-shadow: 3px 3px 1px var(--textcolor_black);
+  &:hover {
+    background-color: var(--slider);
+    box-shadow: none;
+    transform: scale(0.9);
+    transition: all ease-in 300ms;
+  }
 }

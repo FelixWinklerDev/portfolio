@@ -14,6 +14,7 @@
   <section class="d-flex center">
     <div>
       <h1>Legal notice</h1>
+      <button class="close-legal" type="button" (click)="close.emit()">Close</button>
     </div>
   </section>
 </header>
@@ -156,6 +157,7 @@
     given in section 2.
   </p>
   <p class="black-txt">Date: 28.05.2026</p>
+   <button class="close-legal-down" type="button" (click)="close.emit()">Back to Main Page</button>
 </main>
 <footer class="footer d-flex">
   <div class="column d-flex legal">
@@ -164,8 +166,13 @@
     <a class="imprint-link" routerLink="legal">Legal Notice</a>
   </div>
   <div class="space-around d-flex">
-    <a class="imprint-link" href="https://github.com/FelixWinklerDev">GitHub</a>
-    <a class="imprint-link" href="https://www.linkedin.com/in/felix-winkler-38947a365/">LinkedIn</a>
-    <a class="imprint-link" href="mailto:">Email</a>
+    <a class="imprint-link" href="https://github.com/FelixWinklerDev" target="_blank">GitHub</a>
+    <a
+      class="imprint-link"
+      href="https://www.linkedin.com/in/felix-winkler-38947a365/"
+      target="_blank"
+      >LinkedIn</a
+    >
+    <a class="imprint-link" href="mailto:Felix-Winkler96@web.de">Email</a>
   </div>
 </footer>

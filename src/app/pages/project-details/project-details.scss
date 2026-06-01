@@ -43,10 +43,13 @@
   transform: translateY(30px);
 }
 
-.right-bound {
+.right {
   justify-content: right;
-  margin-right: 200px;
-  transform: translateY(-30px);
+  gap: 32px;
+}
+
+.gap {
+  margin: 21px 0;
 }
 
 .color-change-if-active {
@@ -103,9 +106,19 @@
 }
 
 .back-btn {
+  color: var(--textcolor_black);
   background-color: var(--transparence);
   height: 24px;
-  &:hover{
+  &:hover {
+    color: var(--slider);
+  }
+}
+
+.next-btn {
+  color: var(--textcolor_white);
+  background-color: var(--transparence);
+  height: 24px;
+  &:hover {
     color: var(--slider);
   }
 }
@@ -113,4 +126,59 @@
 .arrow {
   height: 45px;
   width: 45px;
+}
+
+.arrow-right {
+  height: 45px;
+  width: 45px;
+  transform: scaleX(-1);
+}
+
+.details-wrapper {
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 40px;
+  gap: 70px;
+}
+
+.project-name-wrapper {
+  width: 100%;
+}
+
+.underline {
+  width: 280px;
+}
+
+.content {
+  width: 450px;
+}
+
+.sticker {
+  height: 120px;
+  width: 120px;
+  transform: translate(-54px, 54px);
+}
+
+.project-preview {
+  height: 280px;
+  width: 400px;
+  border-radius: 15px;
+}
+
+.transparent-btn {
+  position: relative;
+  border: solid 1px var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+  padding: 12px 24px;
+  background-color: var(--transparence);
+  color: var(--textcolor_white);
+  z-index: 1;
+  box-shadow: 3px 3px 1px var(--border);
+  &:hover {
+    background-color: var(--slider);
+    box-shadow: none;
+    transform: scale(0.9);
+    transition: all ease-in 300ms;
+  }
 }

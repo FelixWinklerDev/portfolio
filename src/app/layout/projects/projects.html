@@ -46,5 +46,5 @@
   </div>
 </section>
 <dialog #projectDialog>
-  <app-project-details [project]="selectedProject" (close)="closeProject()"></app-project-details>
+  <app-project-details [project]="selectedProject" (close)="closeProject()" (next)="nextProject()"></app-project-details>
 </dialog>

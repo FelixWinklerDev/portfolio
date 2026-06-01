@@ -1,0 +1,27 @@
+<main class="project-detail-wrapper">
+  <nav class="navbar d-flex">
+    <a href="#hero"><img class="logo" src="/assets/icons/logo.png" alt="logo" /></a>
+    <a class="about-me nav-link black-txt" href="">About Me</a>
+    <a class="skills nav-link black-txt" href="">Skills</a>
+    <a class="projects nav-link" href="">Projects</a>
+    <a class="contact-me nav-link" href="">Contact</a>
+    <div class="d-flex slider-position">
+      <p class="color-change-if-active">EN</p>
+      <input type="range" min="1" max="10" value="1" class="slider" id="myRange" />
+      <p class="color-change-if-active">DE</p>
+    </div>
+  </nav>
+  <div class="d-flex center-btn">
+    <img class="arrow" src="/assets/icons/back-project-details-arrow.png" alt="arrow icon" />
+    <button class="back-btn" id="backButton">Go Back</button>
+  </div>
+  <section>
+    <div>
+      <h2>{{ project?.name }}</h2>
+      <p>{{ project?.description }}</p>
+      <p>{{ project?.details }}</p>
+      <p>Duration: {{ project?.duration }} weeks</p>
+      <p>Technologies: {{ project?.technologies }}</p>
+    </div>
+  </section>
+</main>

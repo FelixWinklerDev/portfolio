@@ -6,6 +6,7 @@ import { Skillset } from './layout/skillset/skillset';
 import { Projects } from './layout/projects/projects';
 import { Testimonials } from './layout/testimonials/testimonials';
 import { ContactMe } from './layout/contact-me/contact-me';
+import { ProjectDetails } from './pages/project-details/project-details';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { ContactMe } from './layout/contact-me/contact-me';
     Projects,
     Testimonials,
     ContactMe,
+    ProjectDetails
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],

@@ -112,9 +112,15 @@ ul {
 dialog {
   border-width: 0;
   scrollbar-width: none;
-  min-width: 100vw;
-  min-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
   width: 100%;
   height: 100%;
   overscroll-behavior: contain;
+  margin: 0;
+  padding: 0;
+}
+
+dialog#mobileNav {
+  background-color: var(--transparence);
 }

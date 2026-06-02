@@ -67,6 +67,7 @@
 .slider-position {
   align-items: center;
   gap: 5px;
+  margin-right: 20px;
 }
 
 .navbar {
@@ -143,7 +144,7 @@
   }
 }
 
-.close-legal-down{
+.close-legal-down {
   position: relative;
   border: solid 1px var(--textcolor_black);
   border-radius: 100px;

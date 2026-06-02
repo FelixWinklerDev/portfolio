@@ -51,14 +51,16 @@
   width: 560px;
 }
 
+.sticker-container{
+  flex-direction: column;
+}
+
 .sticker {
   height: 168px;
   width: 168px;
 }
 
-.circle {
-  transform: translateX(167px);
-}
+
 
 .policy-link {
   color: var(--sliderball);

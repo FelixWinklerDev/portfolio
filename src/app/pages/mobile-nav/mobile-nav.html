@@ -1,0 +1,33 @@
+<section class="mobile-nav-wrapper">
+  <div class="headline d-flex">
+    <a href="#hero"><img class="logo" src="/assets/icons/logo.png" alt="logo" /></a>
+    <button class="close" (click)="close.emit()">
+      <img src="/assets/icons/c_close_menu.png" alt="" />
+    </button>
+  </div>
+  <nav class="mobile-nav d-flex">
+    <a class="mobile-nav-link" href="#about" (click)="close.emit()">About Me</a>
+    <a class="mobile-nav-link" href="#skillset" (click)="close.emit()">Skills</a>
+    <a class="mobile-nav-link" href="#projects" (click)="close.emit()">Projects</a>
+    <a class="mobile-nav-link" href="#contact" (click)="close.emit()">Contact</a>
+    <div class="d-flex mobile-slider-position">
+      <p class="color-change-if-active">EN</p>
+      <input type="range" min="1" max="10" value="1" class="slider" id="myRange" />
+      <p class="color-change-if-active">DE</p>
+    </div>
+    <div class="mobile-socialmedia d-flex">
+      <a
+        class="social-media-link"
+        href="https://www.linkedin.com/in/felix-winkler-38947a365/"
+        target="_blank"
+        ><img class="icons" src="/assets/icons/linkedin-icon.png" alt="linkedin icon"
+      /></a>
+      <a class="social-media-link" href="https://github.com/FelixWinklerDev" target="_blank"
+        ><img class="icons" src="/assets/icons/github-icon.png" alt="gitHub icon"
+      /></a>
+      <a class="social-media-link" href="mailto:Felix-Winkler96@web.de" target="_blank"
+        ><img class="icons" src="/assets/icons/mail-icon.png" alt="mail icon"
+      /></a>
+    </div>
+  </nav>
+</section>

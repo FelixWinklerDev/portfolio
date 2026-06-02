@@ -10,7 +10,17 @@
       <input type="range" min="1" max="10" value="1" class="slider" id="myRange" />
       <p class="color-change-if-active">DE</p>
     </div>
+    <div>
+      <button class="burger-menu" (click)="openMobileMenu($event)">
+        <img src="/assets/icons/c_burgermenu.png" alt="burgermenu" />
+      </button>
+    </div>
   </nav>
+  <!-- Mobile Navigation Menu -->
+  <dialog #mobileNav>
+    <app-mobile-nav (close)="closeMobileMenu()"></app-mobile-nav>
+  </dialog>
+  <!-- Mobile Navigation Menu -->
   <section class="header-wrapper">
     <div class="d-flex centered">
       <div class="header-position d-flex">
@@ -41,7 +51,7 @@
       <a class="social-media-link" href="https://github.com/FelixWinklerDev" target="_blank"
         ><img class="icons" src="/assets/icons/github-icon.png" alt="gitHub icon"
       /></a>
-      <a class="social-media-link" href="mailto:" target="_blank"
+      <a class="social-media-link" href="mailto:Felix-Winkler96@web.de" target="_blank"
         ><img class="icons" src="/assets/icons/mail-icon.png" alt="mail icon"
       /></a>
     </div>

@@ -1,4 +1,4 @@
-<section class="wrapper">
+<section class="wrapper" id="contact">
   <section class="main-wrapper d-flex">
     <div class="d-flex">
       <div class="header-container">
@@ -49,10 +49,11 @@
             placeholder="Hello Felix, I am interested in ..."
           />
           <br />
-          <input type="checkbox" id="policy" name="policy" value="false" />
+          <input type="checkbox" id="policy-check" name="policy" value="false" />
           <label class="policy-txt" for="policy">
-            I've read the <a class="policy-link" href="">privacy policy</a> and agree the processing
-            of my data as outlined.</label
+            I've read the
+            <a class="policy-link" href="#" (click)="openPolicy($event)">privacy policy</a> and
+            agree the processing of my data as outlined.</label
           >
         </form>
       </div>
@@ -60,7 +61,7 @@
   </section>
   <footer class="footer d-flex">
     <div class="column d-flex legal">
-      <img class="logo-footer" src="/assets/icons/logo.png" alt="logo image" />
+      <a href="#hero"><img class="logo-footer" src="/assets/icons/logo.png" alt="logo image" /></a>
       <p>&copy; Felix Winkler 2026</p>
       <a href="#" (click)="openDialog($event)">Legal Notice</a>
     </div>

@@ -21,4 +21,12 @@ export class ContactMe {
   closeDialog() {
     this.legalDialog?.nativeElement.close();
   }
+
+  openPolicy(event: MouseEvent) {
+    this.legalDialog?.nativeElement.showModal();
+    setTimeout(() => {
+      const element = document.getElementById('policy');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
+  }
 }

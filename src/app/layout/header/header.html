@@ -22,7 +22,7 @@
   </dialog>
   <!-- Mobile Navigation Menu -->
   <section class="header-wrapper">
-    <div class="d-flex centered">
+    <div class="d-flex upper-line">
       <div class="header-position d-flex">
         <app-blue-btn></app-blue-btn>
         <h1>
@@ -36,13 +36,13 @@
           >
         </h1>
       </div>
-      <div>
-        <img class="polaroid" src="/assets/img/polaroid_border.png" alt="Polaroidborder" />
-        <img class="felix" src="/assets/img/dummertyp.jpg" alt="profilbild" />
+      <div class="polaroid-wrapper">
+        <img class="polaroid" src="/assets/img/polaroid_border.png" alt="polaroid" />
+        <img class="felix" src="/assets/img/dummertyp.jpg" alt="image of contender" />
         <p class="polaroid-txt">Felix :)</p>
       </div>
     </div>
-    <div class="right-bound d-flex">
+    <div class="down-line d-flex">
       <h1>
         <span
           *ngFor="let letter of headerTitle2"
@@ -54,8 +54,8 @@
         >
       </h1>
     </div>
-    <div class="right-bound d-flex">
-      <button class="dark-bg-btn on-touch">Get in Touch</button>
+    <div class="right d-flex">
+      <a href="#contact" class="dark-bg-btn on-touch">Get in Touch</a>
     </div>
     <div class="socialmedia d-flex">
       <a

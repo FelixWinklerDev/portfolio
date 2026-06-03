@@ -33,6 +33,7 @@ html {
   margin: 0;
   scroll-behavior: smooth;
   font-size: 62.5%;
+  width: 100%;
 }
 
 a {
@@ -121,4 +122,41 @@ dialog {
 
 dialog#mobileNav {
   background-color: var(--transparence);
+}
+
+// Media Query: Tablet ab 768px
+
+@media (max-width: 769px) {
+  h1 {
+    font-size: 6.4rem;
+  }
+
+  h2 {
+    font-size: 3.4rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+}
+
+
+// Media Query: Mobile M ab 375px
+
+@media (max-width: 376px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
 }

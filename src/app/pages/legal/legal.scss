@@ -25,7 +25,7 @@
 .icons {
   height: 32px;
   width: 32px;
-  border: solid 1px var(--border);
+  border: solid 1px var(--main_white);
   border-radius: 16px;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .black-txt {
-  color: var(--textcolor_black);
+  color: var(--main_black);
 }
 
 .center {
@@ -116,28 +116,28 @@
 }
 
 .imprint-link {
-  color: var(--sliderball);
+  color: var(--highlight_blue);
   &:hover {
     text-decoration: underline;
   }
 }
 
 .important-words {
-  color: var(--sliderball);
+  color: var(--highlight_blue);
 }
 
 .close-legal {
   position: relative;
-  border: solid 1px var(--border);
+  border: solid 1px var(--main_white);
   border-radius: 100px;
   overflow: hidden;
   padding: 12px 24px;
   background-color: var(--transparence);
-  color: var(--textcolor_white);
+  color: var(--main_white);
   z-index: 1;
-  box-shadow: 3px 3px 1px var(--border);
+  box-shadow: 3px 3px 1px var(--main_white);
   &:hover {
-    background-color: var(--slider);
+    background-color: var(--highlight_orange);
     box-shadow: none;
     transform: scale(0.9);
     transition: all ease-in 300ms;
@@ -146,16 +146,16 @@
 
 .close-legal-down {
   position: relative;
-  border: solid 1px var(--textcolor_black);
+  border: solid 1px var(--main_black);
   border-radius: 100px;
   overflow: hidden;
   padding: 12px 24px;
   background-color: var(--transparence);
-  color: var(--textcolor_black);
+  color: var(--main_black);
   z-index: 1;
-  box-shadow: 3px 3px 1px var(--textcolor_black);
+  box-shadow: 3px 3px 1px var(--main_black);
   &:hover {
-    background-color: var(--slider);
+    background-color: var(--highlight_orange);
     box-shadow: none;
     transform: scale(0.9);
     transition: all ease-in 300ms;

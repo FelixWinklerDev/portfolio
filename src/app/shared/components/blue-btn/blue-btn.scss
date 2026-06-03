@@ -9,12 +9,11 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--main_white);
   border-radius: 100px;
   padding: 12px 20px;
   background: none;
-  color: var(--textcolor_white);
-  cursor: pointer;
+  color: var(--main_white);
   overflow: visible;
   z-index: 1;
   white-space: nowrap;
@@ -28,7 +27,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-color: var(--sliderball);
+    background-color: var(--highlight_blue);
     z-index: -1;
     transform: scaleX(0);
     transform-origin: bottom;
@@ -39,6 +38,7 @@
   &:hover {
     max-width: 180px;
     padding: 12px 28px;
+    text-decoration: none;
     &::before {
       transform: scaleX(1);
     }

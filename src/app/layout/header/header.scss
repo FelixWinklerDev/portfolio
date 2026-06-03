@@ -18,7 +18,7 @@
 .icons {
   height: 32px;
   width: 32px;
-  border: solid 1px var(--border);
+  border: solid 1px var(--main_white);
   border-radius: 16px;
 }
 
@@ -69,6 +69,19 @@
   flex-direction: column;
 }
 
+.interactive-letter {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  transition: color 160ms ease, top 160ms ease;
+  cursor: default;
+}
+
+.interactive-letter.hovered {
+  color: var(--highlight_yellow);
+  top: -2px;
+}
+
 .nav-link {
   position: relative;
   padding: 15px 30px;
@@ -116,12 +129,12 @@
 
 .waving-btn {
   position: relative;
-  border: solid 1px var(--border);
+  border: solid 1px var(--main_white);
   border-radius: 100px;
   overflow: hidden;
   padding: 12px 24px;
   background-color: rgba(#000000, 0);
-  color: var(--textcolor_white);
+  color: var(--main_white);
   z-index: 1;
   &::before {
     content: '';
@@ -130,7 +143,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--sliderball);
+    background-color: var(--highlight_blue);
     z-index: -1;
     transform: scaleX(0);
     transform-origin: left;
@@ -146,19 +159,19 @@
 .dark-bg-btn {
   margin-top: 40px;
   position: relative;
-  border: solid 1px var(--border);
+  border: solid 1px var(--main_white);
   border-radius: 100px;
   overflow: hidden;
   padding: 12px 24px;
   background-color: rgba(#000000, 0);
-  color: var(--textcolor_white);
+  color: var(--main_white);
   z-index: 1;
 }
 
 .on-touch {
-  box-shadow: 3px 3px 1px var(--border);
+  box-shadow: 3px 3px 1px var(--main_white);
   &:hover {
-    background-color: var(--slider);
+    background-color: var(--highlight_orange);
     box-shadow: none;
     transform: scale(0.9);
     transition: all ease-in 300ms;
@@ -194,7 +207,7 @@
 }
 
 .polaroid-txt {
-  color: var(--textcolor_black);
+  color: var(--main_black);
   font-family: 'Kalam-Regular';
   font-size: 2.4rem;
   rotate: 8deg;

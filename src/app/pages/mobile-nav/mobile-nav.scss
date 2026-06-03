@@ -42,11 +42,11 @@
 }
 
 .mobile-nav-link {
-  color: var(--textcolor_white);
+  color: var(--main_white);
   text-decoration: none;
   padding: 12px 20px;
   &:hover {
-    color: var(--slider);
+    color: var(--highlight_orange);
   }
 }
 
@@ -60,7 +60,7 @@
 }
 
 .social-media-link {
-  border: solid 1px var(--textcolor_white);
+  border: solid 1px var(--main_white);
   height: 32px;
   width: 32px;
   border-radius: 50%;

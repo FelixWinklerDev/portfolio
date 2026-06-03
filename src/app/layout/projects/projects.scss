@@ -12,7 +12,7 @@
 }
 
 .black-txt {
-  color: var(--textcolor_black);
+  color: var(--main_black);
 }
 
 .headline {
@@ -63,7 +63,7 @@
   height: 320px;
   width: 430px;
   border-radius: 15px;
-  border: 1px solid var(--textcolor_black);
+  border: 1px solid var(--main_black);
   &:hover {
     transform: scale(1.05);
     box-shadow: inset 0px 40px 80px rgba(0, 0, 0, 0.3);
@@ -76,17 +76,17 @@
 }
 
 .dark-bg-btn {
-  border: solid 1px var(--border);
+  border: solid 1px var(--main_white);
   border-radius: 100px;
   overflow: hidden;
   padding: 6px 12px;
   background-color: rgba(#000000, 0);
-  color: var(--textcolor_white);
+  color: var(--main_white);
   z-index: 1000;
-  box-shadow: 3px 3px 1px var(--border);
+  box-shadow: 3px 3px 1px var(--main_white);
   transform: translate(250px, -50px);
   &:hover {
-    background-color: var(--slider);
+    background-color: var(--highlight_orange);
     box-shadow: none;
     transition: all ease-in 300ms;
   }

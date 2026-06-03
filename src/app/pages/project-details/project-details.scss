@@ -3,11 +3,11 @@
   width: 100%;
   background-image: url(/assets/img/project-detail-hero.png);
   background-size: cover;
-  background-color: var(--textcolor_black);
+  background-color: var(--main_black);
 }
 
 .black-txt {
-  color: var(--textcolor_black);
+  color: var(--main_black);
 }
 
 .d-flex {
@@ -32,7 +32,7 @@
 .icons {
   height: 32px;
   width: 32px;
-  border: solid 1px var(--border);
+  border: solid 1px var(--main_white);
   border-radius: 16px;
 }
 
@@ -107,20 +107,20 @@
 }
 
 .back-btn {
-  color: var(--textcolor_black);
+  color: var(--main_black);
   background-color: var(--transparence);
   height: 24px;
   &:hover {
-    color: var(--slider);
+    color: var(--highlight_orange);
   }
 }
 
 .next-btn {
-  color: var(--textcolor_white);
+  color: var(--main_white);
   background-color: var(--transparence);
   height: 24px;
   &:hover {
-    color: var(--slider);
+    color: var(--highlight_orange);
   }
 }
 
@@ -168,16 +168,16 @@
 
 .transparent-btn {
   position: relative;
-  border: solid 1px var(--border);
+  border: solid 1px var(--main_white);
   border-radius: 100px;
   overflow: hidden;
   padding: 12px 24px;
   background-color: var(--transparence);
-  color: var(--textcolor_white);
+  color: var(--main_white);
   z-index: 1;
-  box-shadow: 3px 3px 1px var(--border);
+  box-shadow: 3px 3px 1px var(--main_white);
   &:hover {
-    background-color: var(--slider);
+    background-color: var(--highlight_orange);
     box-shadow: none;
     transform: scale(0.9);
     transition: all ease-in 300ms;

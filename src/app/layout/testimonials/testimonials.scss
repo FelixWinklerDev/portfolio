@@ -13,7 +13,7 @@
 }
 
 .black-txt {
-  color: var(--textcolor_black);
+  color: var(--main_black);
 }
 
 .sub-txt {
@@ -45,7 +45,7 @@
   background-image: url(/assets/img/testimonial-paper.png);
   background-size: 620px 420px;
   background-repeat: no-repeat;
-  border: solid 1px var(--textcolor_black);
+  border: solid 1px var(--main_black);
   border-radius: 15px;
   padding: 50px;
 }

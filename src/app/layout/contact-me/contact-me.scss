@@ -17,7 +17,7 @@
 }
 
 .black-txt {
-  color: var(--textcolor_black);
+  color: var(--main_black);
 }
 
 .centered{
@@ -63,7 +63,7 @@
 
 
 .policy-link {
-  color: var(--sliderball);
+  color: var(--highlight_blue);
   &:hover {
     text-decoration: underline;
   }

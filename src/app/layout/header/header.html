@@ -24,10 +24,17 @@
   <section class="header-wrapper">
     <div class="d-flex centered">
       <div class="header-position d-flex">
-        <div>
-          <app-blue-btn></app-blue-btn>
-        </div>
-        <h1>Frontend</h1>
+        <app-blue-btn></app-blue-btn>
+        <h1>
+          <span
+            *ngFor="let letter of headerTitle1"
+            class="interactive-letter"
+            [class.hovered]="letter.hovered"
+            (mouseenter)="setLetterHover(letter, true)"
+            (mouseleave)="setLetterHover(letter, false)"
+            >{{ getLetterDisplay(letter) }}</span
+          >
+        </h1>
       </div>
       <div>
         <img class="polaroid" src="/assets/img/polaroid_border.png" alt="Polaroidborder" />
@@ -36,7 +43,16 @@
       </div>
     </div>
     <div class="right-bound d-flex">
-      <h1>DEVELOPER</h1>
+      <h1>
+        <span
+          *ngFor="let letter of headerTitle2"
+          class="interactive-letter"
+          [class.hovered]="letter.hovered"
+          (mouseenter)="setLetterHover(letter, true)"
+          (mouseleave)="setLetterHover(letter, false)"
+          >{{ getLetterDisplay(letter) }}</span
+        >
+      </h1>
     </div>
     <div class="right-bound d-flex">
       <button class="dark-bg-btn on-touch">Get in Touch</button>

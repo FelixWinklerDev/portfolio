@@ -1,8 +1,7 @@
 <div class="column">
-  <img class="icon" [src]="data.pic" alt="waving hand" />
-  <button class="waving-btn">
-    <span class="inline-txt" [attr.data-hover]="'I\'M FELIX WINKLER'">
-      {{ data.text }}
-    </span>
+  <button class="waving-btn" type="button">
+    <img class="img-hand" [src]="data.pic" alt="waving hand" />
+    <span class="label label-default">{{ data.text }}</span>
+    <span class="label label-hover">{{ data.hoverText }}</span>
   </button>
 </div>

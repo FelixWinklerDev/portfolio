@@ -1,11 +1,11 @@
 import { Component, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BlueBtnConponent } from '../../shared/components/blue-btn/blue-btn';
 import { MobileNav } from '../../pages/mobile-nav/mobile-nav';
+import { BlueBtnComponent } from '../../shared/components/blue-btn/blue-btn';
 
 @Component({
   selector: 'app-header',
-  imports: [BlueBtnConponent, CommonModule, MobileNav],
+  imports: [BlueBtnComponent, CommonModule, MobileNav],
   templateUrl: './header.html',
   styleUrls: ['./header.scss'],
 })

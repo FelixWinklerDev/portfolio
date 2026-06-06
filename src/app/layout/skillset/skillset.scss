@@ -45,6 +45,21 @@
 .header-wrapper {
   flex-direction: column;
   gap: 8px;
+  height: 65px;
+}
+
+.underline {
+  height: 65px;
+  width: 230px;
+  transform: translateY(-50px) scaleX(2);
+  clip-path: inset(0 100% 0 0);
+  animation-name: draw;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
 }
 
 .paper-size {
@@ -109,6 +124,15 @@
   width: 180px;
 }
 
+@keyframes draw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 // Media Query: Tablet on 768px
 
 @media (max-width: 769px) {
@@ -126,6 +150,10 @@
   .header-wrapper {
     justify-content: right;
     width: 100%;
+  }
+
+  .underline {
+    transform: scaleX(1.2);
   }
 
   .skill {

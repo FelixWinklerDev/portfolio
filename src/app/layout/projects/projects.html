@@ -8,9 +8,9 @@
       to explore my work.
     </p>
   </div>
-  <div class="positioning">
+  <div class="positioning d-flex">
     <div class="d-flex" (click)="openProject(projects[0])">
-      <div class="projects">
+      <div class="featured-project">
         <img class="laptop" src="/assets/img/laptop.png" alt="Laptop with project" />
         <img class="sticker" src="/assets/img/project-sticker.png" alt="sticker picture" />
         <button id="projectBtn" class="dark-bg-btn">Project Details</button>
@@ -22,7 +22,7 @@
       functions, assign users and categories.
     </p>
   </div>
-  <div class="positioning">
+  <div class="positioning d-flex">
     <div class="projects" (click)="openProject(projects[1])">
       <img class="project-image" src="/assets/img/el-pollo.png" alt="project picture" />
       <button id="projectBtn" class="dark-bg-btn">Project Details</button>
@@ -33,7 +33,7 @@
       bottles at the Boss in the end.
     </p>
   </div>
-  <div class="positioning">
+  <div class="positioning d-flex">
     <div class="projects" (click)="openProject(projects[2])">
       <img class="project-image" src="/assets/img/pokedex.png" alt="project picture" />
       <button id="projectBtn" class="dark-bg-btn">Project Details</button>
@@ -46,5 +46,9 @@
   </div>
 </section>
 <dialog #projectDialog>
-  <app-project-details [project]="selectedProject" (close)="closeProject()" (next)="nextProject()"></app-project-details>
+  <app-project-details
+    [project]="selectedProject"
+    (close)="closeProject()"
+    (next)="nextProject()"
+  ></app-project-details>
 </dialog>

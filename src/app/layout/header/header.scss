@@ -1,5 +1,5 @@
 .hero {
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   background-image: url(/assets/img/header_bg.png);
   background-size: cover;
@@ -16,10 +16,10 @@
 }
 
 .icons {
-  height: 32px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
   border: solid 1px var(--main_white);
-  border-radius: 16px;
+  border-radius: 20px;
 }
 
 .d-flex {
@@ -32,17 +32,17 @@
 
 .right {
   justify-content: right;
-  margin-right: 180px;
+  margin-right: 280px;
 }
 
 .upper-line {
-  padding-left: 150px;
-  padding-top: 60px;
+  padding: 150px 0 0 200px;
 }
 
 .down-line {
   justify-content: right;
-  margin-right: 180px;
+  margin-right: 280px;
+  margin-top: -50px;
 }
 
 .color-change-if-active {
@@ -172,17 +172,17 @@
 }
 
 .polaroid {
-  height: 220px;
-  width: 200px;
+  height: 250px;
+  width: 205px;
   rotate: 8deg;
 }
 
 .felix {
   filter: grayscale(1);
-  height: 160px;
-  width: 170px;
+  height: 182px;
+  width: 174px;
   rotate: 8deg;
-  transform: translate(-187px, -25px);
+  transform: translate(-192px, -26px);
   &:hover {
     filter: grayscale(0);
   }
@@ -257,14 +257,14 @@
 .socialmedia {
   flex-direction: column;
   justify-content: center;
-  margin-left: 45px;
+  margin-left: 200px;
   gap: 10px;
   transform: translate(-2px, -75px);
-  width: 35px;
+  width: 42px;
 }
 
 .social-media-link {
-  width: 35px;
+  width: 42px;
   overflow: hidden;
 }
 
@@ -336,6 +336,15 @@
 
   dialog {
     background-color: var(--transparence);
+  }
+
+  .down-line {
+    margin-top: 0;
+  }
+
+  .right {
+    justify-content: right;
+    margin-right: 20%;
   }
 }
 

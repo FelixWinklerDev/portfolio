@@ -2,8 +2,22 @@
   display: flex;
 }
 
+.a-end {
+  align-items: end;
+  margin-right: 10px;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
 .space {
   justify-content: space-around;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 .icon {
@@ -26,6 +40,10 @@
   height: 36px;
 }
 
+.text-position {
+  transform: translateY(-255px) translateX(15px);
+}
+
 .header-testimonial {
   justify-content: center;
   align-items: end;
@@ -36,30 +54,48 @@
 
 .wrapper {
   width: 100%;
-  padding: 144px 0;
+  padding-top: 144px;
 }
 
 .container {
   height: 100%;
-  width: 100%;
-  background-image: url(/assets/img/testimonial-paper.png);
-  background-size: 620px 420px;
-  background-repeat: no-repeat;
-  border: solid 1px var(--main_black);
+  width: 420px;
   border-radius: 15px;
   padding: 50px;
 }
 
+.paper {
+  height: 310px;
+  width: 450px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/hover.png);
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
 .left {
-  rotate: -4deg;
+  rotate: -6deg;
   z-index: 3;
-  transform: translateX(100px);
+  transform: translateX(110px);
   &:hover {
     z-index: 5;
   }
 }
 
 .mid {
+  transform: translateY(-20px);
   z-index: 2;
   &:hover {
     z-index: 5;
@@ -67,34 +103,95 @@
 }
 
 .right {
-  rotate: 4deg;
+  rotate: 6deg;
   z-index: 1;
-  transform: translateX(-100px);
+  transform: translateX(-110px);
   &:hover {
     z-index: 5;
+  }
+}
+
+// Media Query: on 1400px
+
+@media (max-width: 1400px) {
+  .mobile {
+    flex-direction: column;
+  }
+
+  .container {
+    height: 355px;
+    padding: 0;
+  }
+
+  .left {
+    transform: translateX(0px) translateY(50px);
+  }
+
+  .right {
+    transform: translateX(-18px) translateY(-90px);
+  }
+
+  .header-testimonial {
+    padding-right: 80px;
   }
 }
 
 // Media Query: Tablet on 768px
 
 @media (max-width: 769px) {
-  
+  .paper {
+    height: 290px;
+    width: 400px;
+  }
+
+  .container {
+    height: 330px;
+    width: 380px;
+    padding: 0;
+  }
+
+  .header-testimonial {
+    padding-right: 50px;
+  }
 }
 
 // Media Query: Mobile L on 425px
 
 @media (max-width: 426px) {
+  .paper {
+    height: 250px;
+    width: 320px;
+  }
 
+  .container {
+    height: 270px;
+    width: 320px;
+  }
+
+  .header-testimonial {
+    padding-right: 10px;
+  }
 }
 
 // Media Query: Mobile M on 375px
 
 @media (max-width: 376px) {
-
 }
 
 // Media Query: Mobile S on 320px
 
 @media (max-width: 321px) {
+    .paper {
+    height: 230px;
+    width: 250px;
+  }
 
+  .container {
+    height: 230px;
+    width: 240px;
+  }
+
+  .text-position {
+  transform: translateY(-240px) translateX(5px);
+}
 }

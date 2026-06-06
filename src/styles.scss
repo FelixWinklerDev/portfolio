@@ -5,6 +5,7 @@
   --highlight_orange: #f87a55;
   --highlight_blue: #3355ff;
   --highlight_yellow: #f6c418;
+  --requirement: #e76e4e;
   --transparence: #00000000;
 }
 
@@ -122,6 +123,10 @@ dialog {
 
 dialog#mobileNav {
   background-color: var(--transparence);
+}
+
+input {
+  color: var(--main_white);
 }
 
 // Media Query: Tablet ab 768px

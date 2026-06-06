@@ -1,6 +1,6 @@
 <section class="wrapper" id="contact">
   <section class="main-wrapper d-flex">
-    <div class="d-flex">
+    <div class="d-flex space">
       <div class="header-container">
         <h3>Contact me</h3>
         <h2>Ready to work together?</h2>
@@ -36,26 +36,48 @@
         </div>
       </div>
       <div class="form">
-        <form>
+        <form class="gap d-flex column">
           <label for="name">What's your name?</label><br />
-          <input type="text" id="fname" name="fname" placeholder="Your name goes here" /><br />
+          <input
+            class="text-field"
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="Your name goes here"
+            required
+          /><br />
           <label for="email">What's your email?</label><br />
-          <input type="text" id="email" name="email" placeholder="yourmail@email.com" /><br />
+          <input
+            class="text-field"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="yourmail@email.com"
+            required
+          /><br />
           <label for="message">How can i help you?</label><br />
           <input
+            class="text-field"
             type="text"
             id="message"
             name="message"
             placeholder="Hello Felix, I am interested in ..."
+            required
           />
           <br />
-          <input type="checkbox" id="policy-check" name="policy" value="false" />
-          <label class="policy-txt" for="policy">
-            I've read the
-            <a class="policy-link" href="#" (click)="openPolicy($event)">privacy policy</a> and
-            agree the processing of my data as outlined.</label
-          >
+          <div>
+            <input type="checkbox" id="policy-check" name="policy" value="false" />
+            <label class="policy-txt" for="policy">
+              I've read the
+              <a class="policy-link" href="#" (click)="openPolicy($event)">privacy policy</a> and
+              agree the processing of my data as outlined.</label
+            >
+          </div>
+          <span class="requirement">Please accept the prviacy policy.</span>
         </form>
+        <div class="d-flex right">
+          <button disabled class="send-button">Send</button>
+        </div>
       </div>
     </div>
   </section>

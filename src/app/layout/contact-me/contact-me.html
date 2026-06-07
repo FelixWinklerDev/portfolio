@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="form">
-        <form class="gap d-flex column">
+        <form (ngSubmit)="submitForm()" class="gap d-flex column">
           <label for="name">What's your name?</label><br />
           <input
             class="text-field"
@@ -44,8 +44,12 @@
             id="fname"
             name="fname"
             placeholder="Your name goes here"
+            [(ngModel)]="fname"
             required
-          /><br />
+          />
+          <span class="requirement" [class.visible]="showValidationError('fname')">
+            Please enter your name.
+          </span><br />
           <label for="email">What's your email?</label><br />
           <input
             class="text-field"
@@ -53,8 +57,12 @@
             id="email"
             name="email"
             placeholder="yourmail@email.com"
+            [(ngModel)]="email"
             required
-          /><br />
+          />
+          <span class="requirement" [class.visible]="showValidationError('email')">
+            Please enter your e-mail.
+          </span><br />
           <label for="message">How can i help you?</label><br />
           <input
             class="text-field"
@@ -62,21 +70,37 @@
             id="message"
             name="message"
             placeholder="Hello Felix, I am interested in ..."
+            [(ngModel)]="message"
             required
           />
+          <span class="requirement" [class.visible]="showValidationError('message')">
+            Please enter at least 10 characters.
+          </span>
           <br />
           <div>
-            <input type="checkbox" id="policy-check" name="policy" value="false" />
-            <label class="policy-txt" for="policy">
+            <input
+              type="checkbox"
+              id="policy-check"
+              name="policy"
+              [(ngModel)]="policyCheck"
+            />
+            <label class="policy-txt" for="policy-check">
               I've read the
               <a class="policy-link" href="#" (click)="openPolicy($event)">privacy policy</a> and
               agree the processing of my data as outlined.</label
             >
           </div>
-          <span class="requirement">Please accept the prviacy policy.</span>
+          <span class="requirement" [class.visible]="!policyCheck">
+            Please accept the privacy policy.
+          </span>
         </form>
         <div class="d-flex right">
-          <button disabled class="send-button">Send</button>
+          <button
+            [disabled]="!isFormValid()"
+            class="send-button"
+          >
+            Send
+          </button>
         </div>
       </div>
     </div>
@@ -93,7 +117,17 @@
       <a href="mailto:Felix-Winkler96@web.de">Email</a>
     </div>
   </footer>
-</section>
-<dialog #legalDialog>
-  <app-legal (close)="closeDialog()"></app-legal>
-</dialog>
+  </section>
+  <dialog #successDialog class="success-dialog">
+    <div class="success-content">
+      <h3>Your message was sent</h3>
+      <p>Thanks — your message has been sent. I'll get back to you soon.</p>
+      <div class="actions">
+        <button class="close-btn" (click)="closeSuccessDialog()">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog #legalDialog>
+    <app-legal (close)="closeDialog()"></app-legal>
+  </dialog>

@@ -133,18 +133,22 @@
   }
 }
 
-// Media Query: Tablet on 768px
+// Media Query: on 1000px
 
-@media (max-width: 769px) {
-  .skill-wrapper {
-    height: 800px;
-    padding: 80px 80px;
-  }
-
+@media (max-width: 1000px) {
   .content {
     flex-direction: column;
     gap: 5px;
-    padding-bottom: 0;
+    padding-bottom: 20px ;
+  }
+}
+
+// Media Query: on 800px
+
+@media (max-width: 800px) {
+  .skill-wrapper {
+    height: 800px;
+    padding: 80px 80px;
   }
 
   .header-wrapper {
@@ -153,7 +157,7 @@
   }
 
   .underline {
-    transform: scaleX(1.2);
+    transform: translateY(-50px) scaleX(1.2);
   }
 
   .skill {

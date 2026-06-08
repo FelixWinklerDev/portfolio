@@ -48,8 +48,8 @@
             required
           />
           <span class="requirement" [class.visible]="showValidationError('fname')">
-            Please enter your name.
-          </span><br />
+            Please enter your name. </span
+          ><br />
           <label for="email">What's your email?</label><br />
           <input
             class="text-field"
@@ -61,8 +61,8 @@
             required
           />
           <span class="requirement" [class.visible]="showValidationError('email')">
-            Please enter your e-mail.
-          </span><br />
+            Please enter your e-mail. </span
+          ><br />
           <label for="message">How can i help you?</label><br />
           <input
             class="text-field"
@@ -78,12 +78,7 @@
           </span>
           <br />
           <div>
-            <input
-              type="checkbox"
-              id="policy-check"
-              name="policy"
-              [(ngModel)]="policyCheck"
-            />
+            <input type="checkbox" id="policy-check" name="policy" [(ngModel)]="policyCheck" />
             <label class="policy-txt" for="policy-check">
               I've read the
               <a class="policy-link" href="#" (click)="openPolicy($event)">privacy policy</a> and
@@ -94,13 +89,9 @@
             Please accept the privacy policy.
           </span>
         </form>
-        <div class="d-flex right">
-          <button
-            [disabled]="!isFormValid()"
-            class="send-button"
-          >
-            Send
-          </button>
+        <div class="d-flex center">
+          <img class="line-mobile" src="/assets/icons/contact_line.png" alt="" />
+          <button [disabled]="!isFormValid()" class="send-button">Send</button>
         </div>
       </div>
     </div>
@@ -117,17 +108,17 @@
       <a href="mailto:Felix-Winkler96@web.de">Email</a>
     </div>
   </footer>
-  </section>
-  <dialog #successDialog class="success-dialog">
-    <div class="success-content">
-      <h3>Your message was sent</h3>
-      <p>Thanks — your message has been sent. I'll get back to you soon.</p>
-      <div class="actions">
-        <button class="close-btn" (click)="closeSuccessDialog()">Close</button>
-      </div>
+</section>
+<dialog #successDialog class="success-dialog">
+  <div class="success-content">
+    <h3>Your message was sent</h3>
+    <p>Thanks — your message has been sent. I'll get back to you soon.</p>
+    <div class="actions">
+      <button class="close-btn" (click)="closeSuccessDialog()">Close</button>
     </div>
-  </dialog>
+  </div>
+</dialog>
 
-  <dialog #legalDialog>
-    <app-legal (close)="closeDialog()"></app-legal>
-  </dialog>
+<dialog #legalDialog>
+  <app-legal (close)="closeDialog()"></app-legal>
+</dialog>

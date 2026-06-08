@@ -1,11 +1,8 @@
 .about-wrapper {
   justify-content: space-between;
   align-items: center;
-  padding-top: 144px;
-  padding-bottom: 144px;
-  padding-right: 20px;
-  padding-left: 20px;
-  gap: 42px;
+  padding: 144px 0;
+  gap: 180px;
 }
 
 .right-bound {
@@ -34,9 +31,10 @@
 
 .yellow {
   rotate: -8deg;
-  transform: translate(-152px, 50px);
+  transform: translateY(50px);
   z-index: 110;
   flex-direction: row-reverse;
+  width: 600px;
   & .yellow-txt {
     transform: translateX(450px);
     margin-top: 35px;
@@ -46,12 +44,12 @@
 }
 
 .blue {
-  transform: translate(-152px);
   z-index: 109;
+  width: 700px;
   flex-direction: row-reverse;
   & .blue-txt {
     transform: translateX(450px);
-    margin-top: 60px;
+    margin-top: 50px;
     font-size: 2.4rem;
     width: 200px;
   }
@@ -59,13 +57,14 @@
 
 .orange {
   rotate: 8deg;
-  transform: translate(-152px, -30px);
+  width: 800px;
+  transform: translateY(-30px);
   flex-direction: row-reverse;
   & .orange-txt {
     transform: translateX(450px);
     margin-top: 45px;
     font-size: 2.4rem;
-    width: 200px;
+    width: 400px;
   }
 }
 
@@ -104,9 +103,9 @@
   box-shadow: 3px 3px 1px var(--main_black);
 }
 
-// Media Query: Tablet on 768px
+// Media Query: on 1000px
 
-@media (max-width: 769px) {
+@media (max-width: 1000px) {
   .paper-size {
     height: 120px;
     width: 360px;
@@ -134,7 +133,13 @@
     transform: translateX(100px);
   }
 
+  .paper-positioning {
+    align-items: center;
+    justify-content: center;
+  }
+
   .orange {
+    transform: translateY(-50px);
     & .orange-txt {
       transform: translateX(320px);
       margin-top: 45px;
@@ -144,6 +149,7 @@
   }
 
   .yellow {
+    transform: translateY(60px);
     & .yellow-txt {
       transform: translateX(320px);
       margin-top: 30px;
@@ -153,12 +159,25 @@
   }
 
   .blue {
+    transform: translateY(0px);
     & .blue-txt {
       transform: translateX(320px);
       margin-top: 55px;
       font-size: 1.6rem;
       width: 170px;
     }
+  }
+}
+
+@media (max-width: 560px) {
+  .paper-positioning {
+    width: 380px;
+  }
+
+  .blue,
+  .yellow,
+  .orange {
+    width: 380px;
   }
 }
 
@@ -177,6 +196,12 @@
   .icons {
     transform: translateX(110px);
   }
+
+  .blue,
+  .yellow,
+  .orange {
+    width: 320px;
+  }
 }
 
 // Media Query: Mobile S on 320px
@@ -186,7 +211,7 @@
     width: 280px;
   }
 
-    .paper-size {
+  .paper-size {
     transform: translateX(40px);
     width: 300px;
   }

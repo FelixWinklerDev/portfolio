@@ -173,7 +173,7 @@
   border-radius: 100px;
   overflow: hidden;
   padding: 6px 12px;
-  background-color: rgba(#000000, 0);
+  background-color: var(--transparence);
   color: var(--main_white);
   z-index: 1000;
   box-shadow: 3px 3px 1px var(--main_white);
@@ -213,6 +213,19 @@
 // Media Query: Tablet on 768px
 
 @media (max-width: 769px) {
+  .laptop {
+    height: 270px;
+    width: 350px;
+  }
+
+  .projects {
+    height: 270px;
+    width: 350px;
+  }
+
+  .sub-txt {
+    width: 450px;
+}
 }
 
 // Media Query: Mobile L on 425px
@@ -223,9 +236,27 @@
 // Media Query: Mobile M on 375px
 
 @media (max-width: 376px) {
+  .laptop {
+    height: 250px;
+    width: 325px;
+  }
+
+  .projects {
+    height: 250px;
+    width: 325px;
+  }
 }
 
 // Media Query: Mobile S on 320px
 
 @media (max-width: 321px) {
+  .laptop {
+    height: 220px;
+    width: 300px;
+  }
+
+  .projects {
+    height: 220px;
+    width: 300px;
+  }
 }

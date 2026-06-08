@@ -36,6 +36,7 @@
 }
 
 .upper-line {
+  position: relative;
   padding: 150px 0 0 200px;
 }
 
@@ -78,7 +79,6 @@
   transition:
     color 160ms ease,
     top 160ms ease;
-  cursor: default;
 }
 
 .interactive-letter.hovered {
@@ -172,17 +172,19 @@
 }
 
 .polaroid {
-  height: 250px;
-  width: 205px;
+  width: 230px;
+  height: auto;
   rotate: 8deg;
 }
 
 .felix {
+  position: absolute;
+  top: 6%;
+  right: 7%;
+  width: 188px;
+  height: 192px;
   filter: grayscale(1);
-  height: 182px;
-  width: 174px;
   rotate: 8deg;
-  transform: translate(-192px, -26px);
   &:hover {
     filter: grayscale(0);
   }
@@ -269,18 +271,20 @@
 }
 
 .polaroid-txt {
+  position: absolute;
+  bottom: 5%;
+  left: 22%;
   color: var(--main_black);
   font-family: 'Kalam-Regular';
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   rotate: 8deg;
-  transform: translateY(-55px);
-  padding-left: 40px;
+  margin: 0;
 }
 
 .polaroid-wrapper {
   position: absolute;
-  right: 150px;
-  top: 100px;
+  right: 380px;
+  top: 20px;
 }
 
 .burger-menu {
@@ -300,6 +304,18 @@
 
 .mobile-nav {
   display: none;
+}
+
+// Media Query: Tablet on 1100px
+
+@media (max-width: 1100px) {
+  .right {
+    margin-right: 20px;
+  }
+
+  .down-line {
+    margin-right: 20px;
+  }
 }
 
 // Media Query: Tablet on 768px
@@ -326,8 +342,25 @@
   }
 
   .polaroid-wrapper {
-    right: 10%;
-    top: 63%;
+    left: 35%;
+    top: 175%;
+    width: 280px;
+  }
+
+  .polaroid {
+    width: 200px;
+    height: auto;
+    rotate: 8deg;
+  }
+
+  .felix {
+    width: 200px;
+    height: 240px;
+  }
+
+  .polaroid-txt {
+    left: 10%;
+    top: 55%;
   }
 
   .dark-bg-btn {
@@ -342,6 +375,10 @@
     margin-top: 0;
   }
 
+  .upper-line {
+    padding-top: 50px;
+  }
+
   .right {
     justify-content: right;
     margin-right: 20%;
@@ -352,7 +389,14 @@
 
 @media (max-width: 426px) {
   .polaroid-wrapper {
-    right: -15%;
+    left: 26%;
+    top: 185%;
+    width: 250px;
+  }
+
+  .polaroid-txt {
+    top: 63%;
+    left: 15%;
   }
 
   .right {

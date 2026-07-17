@@ -1,12 +1,17 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-legal',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './legal.html',
   styleUrl: './legal.scss',
 })
 export class Legal {
-  @Output() close = new EventEmitter<void>();
+  constructor(private router: Router) {}
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }

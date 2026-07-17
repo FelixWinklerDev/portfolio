@@ -1,17 +1,18 @@
 import { Component, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Legal } from '../../pages/legal/legal';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [Legal, FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterLink],
   templateUrl: './contact-me.html',
   styleUrls: ['./contact-me.scss'],
 })
 export class ContactMe {
-  @ViewChild('legalDialog') legalDialog?: ElementRef<HTMLDialogElement>;
   @ViewChild('successDialog') successDialog?: ElementRef<HTMLDialogElement>;
+
+  private readonly emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   fname: string = '';
   email: string = '';
@@ -20,26 +21,12 @@ export class ContactMe {
 
   constructor(private cd: ChangeDetectorRef) {}
 
-  openDialog(event: MouseEvent) {
-    event.preventDefault();
-    this.cd.detectChanges();
-    this.legalDialog?.nativeElement.showModal();
-  }
-
-  closeDialog() {
-    this.legalDialog?.nativeElement.close();
-  }
-
   closeSuccessDialog() {
     this.successDialog?.nativeElement.close();
   }
 
-  openPolicy(event: MouseEvent) {
-    this.legalDialog?.nativeElement.showModal();
-    setTimeout(() => {
-      const element = document.getElementById('policy');
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }, 50);
+  isEmailValid(email: string): boolean {
+    return this.emailPattern.test(email.trim());
   }
 
   isFieldInvalid(field: string): boolean {
@@ -47,7 +34,7 @@ export class ContactMe {
       return this.fname.length < 3 && this.fname.length > 0;
     }
     if (field === 'email') {
-      return this.email.length < 8 && this.email.length > 0;
+      return this.email.length > 0 && !this.isEmailValid(this.email);
     }
     if (field === 'message') {
       return this.message.length < 10 && this.message.length > 0;
@@ -75,7 +62,7 @@ export class ContactMe {
   isFormValid(): boolean {
     return (
       this.fname.length >= 3 &&
-      this.email.length >= 8 &&
+      this.isEmailValid(this.email) &&
       this.message.length >= 10 &&
       this.policyCheck === true
     );

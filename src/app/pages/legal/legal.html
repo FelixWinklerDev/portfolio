@@ -14,7 +14,7 @@
   <section class="d-flex center">
     <div>
       <h1>Legal notice</h1>
-      <button class="close-legal" type="button" (click)="close.emit()">Close</button>
+      <button class="close-legal" type="button" (click)="goHome()">Close</button>
     </div>
   </section>
 </header>
@@ -157,13 +157,13 @@
     given in section 2.
   </p>
   <p class="black-txt">Date: 28.05.2026</p>
-  <button class="close-legal-down" type="button" (click)="close.emit()">Back to Main Page</button>
+  <button class="close-legal-down" type="button" (click)="goHome()">Back to Main Page</button>
 </main>
 <footer class="footer d-flex">
   <div class="column d-flex legal">
     <a href="#hero"><img class="logo" src="assets/icons/logo.png" alt="logo image" /></a>
     <p class="black-txt">&copy; Felix Winkler 2026</p>
-    <a class="imprint-link" routerLink="legal">Legal Notice</a>
+    <a class="imprint-link" routerLink="/">Home</a>
   </div>
   <div class="space-around d-flex">
     <a class="imprint-link" href="https://github.com/FelixWinklerDev" target="_blank">GitHub</a>

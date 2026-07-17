@@ -53,12 +53,13 @@
           <label for="email">What's your email?</label><br />
           <input
             class="text-field"
-            type="text"
+            type="email"
             id="email"
             name="email"
             placeholder="yourmail@email.com"
             [(ngModel)]="email"
             required
+            autocomplete="email"
           />
           <span class="requirement" [class.visible]="showValidationError('email')">
             Please enter your e-mail. </span
@@ -81,7 +82,7 @@
             <input type="checkbox" id="policy-check" name="policy" [(ngModel)]="policyCheck" />
             <label class="policy-txt" for="policy-check">
               I've read the
-              <a class="policy-link" href="#" (click)="openPolicy($event)">privacy policy</a> and
+              <a class="policy-link" routerLink="/legal">privacy policy</a> and
               agree the processing of my data as outlined.</label
             >
           </div>
@@ -91,7 +92,7 @@
         </form>
         <div class="d-flex right">
           <img class="line-mobile" src="assets/icons/contact_line.png" alt="" />
-          <button [disabled]="!isFormValid()" class="send-button">Send</button>
+          <button type="button" [disabled]="!isFormValid()" class="send-button" (click)="submitForm()">Send</button>
         </div>
       </div>
     </div>
@@ -100,7 +101,7 @@
     <div class="column d-flex legal">
       <a href="#hero"><img class="logo-footer" src="assets/icons/logo.png" alt="logo image" /></a>
       <p>&copy; Felix Winkler 2026</p>
-      <a href="#" (click)="openDialog($event)">Legal Notice</a>
+      <a routerLink="/legal">Legal Notice</a>
     </div>
     <div class="space-around d-flex">
       <a href="https://github.com/FelixWinklerDev">GitHub</a>
@@ -117,8 +118,4 @@
       <button class="close-btn" (click)="closeSuccessDialog()">Close</button>
     </div>
   </div>
-</dialog>
-
-<dialog #legalDialog>
-  <app-legal (close)="closeDialog()"></app-legal>
 </dialog>

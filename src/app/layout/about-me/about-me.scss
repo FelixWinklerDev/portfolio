@@ -136,6 +136,7 @@
   .paper-positioning {
     align-items: center;
     justify-content: center;
+    transform: translateX(-200px);
   }
 
   .orange {
@@ -172,6 +173,7 @@
 @media (max-width: 560px) {
   .paper-positioning {
     width: 380px;
+    transform: translateX(-30px);
   }
 
   .blue,
@@ -189,7 +191,7 @@
   }
 
   .paper-size {
-    transform: translateX(30px);
+    transform: translateX(40px);
     width: 320px;
   }
 
@@ -212,7 +214,7 @@
   }
 
   .paper-size {
-    transform: translateX(40px);
+    transform: translateX(10px);
     width: 300px;
   }
 }

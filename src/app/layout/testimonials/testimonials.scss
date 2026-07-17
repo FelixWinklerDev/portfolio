@@ -75,7 +75,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/assets/img/hover.png);
+    background-image: url(assets/img/hover.png);
     background-size: cover;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -181,7 +181,7 @@
 // Media Query: Mobile S on 320px
 
 @media (max-width: 321px) {
-    .paper {
+  .paper {
     height: 230px;
     width: 250px;
   }
@@ -192,6 +192,6 @@
   }
 
   .text-position {
-  transform: translateY(-240px) translateX(5px);
-}
+    transform: translateY(-240px) translateX(5px);
+  }
 }

@@ -1,7 +1,7 @@
 .hero {
   height: 100vh;
   width: 100%;
-  background-image: url(/assets/img/header_bg.png);
+  background-image: url(assets/img/header_bg.png);
   background-size: cover;
   background-position: bottom;
 }
@@ -100,19 +100,19 @@
 }
 
 .about-me:hover {
-  background-image: url(/assets/icons/aboutme_header_animation.png);
+  background-image: url(assets/icons/aboutme_header_animation.png);
 }
 
 .skills:hover {
-  background-image: url(/assets/icons/skill_header_animation.png);
+  background-image: url(assets/icons/skill_header_animation.png);
 }
 
 .projects:hover {
-  background-image: url(/assets/icons/projekt_header_animation.png);
+  background-image: url(assets/icons/projekt_header_animation.png);
 }
 
 .contact-me:hover {
-  background-image: url(/assets/icons/contact_header_animation.png);
+  background-image: url(assets/icons/contact_header_animation.png);
 }
 
 .imprint-link {
@@ -165,23 +165,19 @@
 // Media Query: Tablet on 768px
 
 @media (max-width: 769px) {
-  
 }
 
 // Media Query: Mobile L on 425px
 
 @media (max-width: 426px) {
-
 }
 
 // Media Query: Mobile M on 375px
 
 @media (max-width: 376px) {
-
 }
 
 // Media Query: Mobile S on 320px
 
 @media (max-width: 321px) {
-
 }

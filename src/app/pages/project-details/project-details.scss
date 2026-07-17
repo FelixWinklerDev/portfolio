@@ -1,7 +1,7 @@
 .project-detail-wrapper {
   height: 100vh;
   width: 100%;
-  background-image: url(/assets/img/project-detail-hero.png);
+  background-image: url(assets/img/project-detail-hero.png);
   background-size: cover;
   background-color: var(--main_black);
 }
@@ -91,19 +91,19 @@
 }
 
 .about-me:hover {
-  background-image: url(/assets/icons/aboutme_header_animation.png);
+  background-image: url(assets/icons/aboutme_header_animation.png);
 }
 
 .skills:hover {
-  background-image: url(/assets/icons/skill_header_animation.png);
+  background-image: url(assets/icons/skill_header_animation.png);
 }
 
 .projects:hover {
-  background-image: url(/assets/icons/projekt_header_animation.png);
+  background-image: url(assets/icons/projekt_header_animation.png);
 }
 
 .contact-me:hover {
-  background-image: url(/assets/icons/contact_header_animation.png);
+  background-image: url(assets/icons/contact_header_animation.png);
 }
 
 .back-btn {

@@ -1,6 +1,6 @@
 <main class="project-detail-wrapper">
   <nav class="navbar d-flex">
-    <a href="#hero"><img class="logo" src="/assets/icons/logo.png" alt="logo" /></a>
+    <a href="#hero"><img class="logo" src="assets/icons/logo.png" alt="logo" /></a>
     <a class="about-me nav-link black-txt" href="">About Me</a>
     <a class="skills nav-link black-txt" href="">Skills</a>
     <a class="projects nav-link" href="">Projects</a>
@@ -12,14 +12,14 @@
     </div>
   </nav>
   <div class="d-flex center-btn">
-    <img class="arrow" src="/assets/icons/back-project-details-arrow.png" alt="arrow icon left" />
+    <img class="arrow" src="assets/icons/back-project-details-arrow.png" alt="arrow icon left" />
     <button class="back-btn" id="backButton" (click)="close.emit()">Go Back</button>
   </div>
   <section class="details-wrapper d-flex">
     <div class="content">
       <div class="project-name-wrapper">
         <h2 class="black-txt">{{ project?.name }}</h2>
-        <img class="underline" src="/assets/img/underline-projectname.png" alt="underline" />
+        <img class="underline" src="assets/img/underline-projectname.png" alt="underline" />
       </div>
       <h3 class="black-txt">Description</h3>
       <p class="black-txt">{{ project?.description }}</p>
@@ -41,7 +41,7 @@
         <button class="next-btn" id="nextButton" (click)="next.emit()">Next Project</button>
         <img
           class="arrow-right"
-          src="/assets/icons/next-project-details-arrow.png"
+          src="assets/icons/next-project-details-arrow.png"
           alt="arrow icon right"
         />
       </div>

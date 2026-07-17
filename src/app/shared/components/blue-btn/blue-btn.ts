@@ -15,6 +15,6 @@ export class BlueBtnComponent {
   data: ButtonContent = {
     text: 'Hello World',
     hoverText: "I'M FELIX WINKLER",
-    pic: '/assets/icons/waving_hand.png',
+    pic: 'assets/icons/waving_hand.png',
   };
 }

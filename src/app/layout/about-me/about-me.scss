@@ -181,6 +181,20 @@
   .orange {
     width: 380px;
   }
+
+  .blue .blue-txt {
+    margin-top: 45px;
+    transform: translateX(280px);
+  }
+
+  .orange .orange-txt {
+    width: 180px;
+    transform: translateX(290px);
+  }
+
+  .icons {
+    transform: translateX(120px);
+  }
 }
 
 // Media Query: Mobile L on 425px
@@ -193,10 +207,6 @@
   .paper-size {
     transform: translateX(40px);
     width: 320px;
-  }
-
-  .icons {
-    transform: translateX(110px);
   }
 
   .blue,

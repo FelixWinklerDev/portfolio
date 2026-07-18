@@ -181,8 +181,8 @@
   position: absolute;
   top: 6%;
   right: 7%;
-  width: 192px;
-  height: 192px;
+  width: 195px;
+  height: 195px;
   filter: grayscale(1);
   rotate: 8deg;
   &:hover {
@@ -328,7 +328,7 @@
   }
 
   .down-line {
-    margin-right: 20px;
+    margin-right: 1px;
   }
 
   .polaroid-wrapper {
@@ -342,8 +342,8 @@
   }
 
   .felix {
-    top: 6%;
-    right: 40%;
+    top: 5.9%;
+    right: 23%;
   }
 }
 
@@ -368,8 +368,8 @@
 
   .down-line {
     margin-top: -20px;
-    margin-right: 80px;
-    justify-content: end;
+    margin-left: 100px;
+    justify-content: start;
   }
 
   .polaroid {
@@ -416,11 +416,11 @@
 
 @media (max-width: 490px) {
   .upper-line {
-    padding-left: 70px;
+    padding-left: 50px;
   }
 
   .down-line {
-    margin-right: 40px;
+    margin-left: 50px;
   }
 }
 
@@ -432,7 +432,7 @@
   }
 
   .down-line {
-    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .right {
@@ -445,6 +445,14 @@
 @media (max-width: 376px) {
   .polaroid-wrapper {
     right: -24%;
+  }
+
+    .upper-line {
+    padding-left: 40px;
+  }
+
+  .down-line {
+    margin-left: 40px;
   }
 
   .right {

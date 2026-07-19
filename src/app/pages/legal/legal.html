@@ -1,20 +1,29 @@
 <header class="hero" id="hero">
   <nav class="navbar d-flex">
-    <a href="#hero"><img class="logo" src="assets/icons/logo.png" alt="logo" /></a>
-    <a class="about-me nav-link" href="">About Me</a>
-    <a class="skills nav-link" href="">Skills</a>
-    <a class="projects nav-link" href="">Projects</a>
-    <a class="contact-me nav-link" href="">Contact</a>
+    <a routerLink="/"><img class="logo" src="assets/icons/logo.png" alt="logo" /></a>
+    <a class="about-me nav-link" routerLink="/#about">About Me</a>
+    <a class="skills nav-link" routerLink="/#skillset">Skills</a>
+    <a class="projects nav-link" routerLink="/#projects">Projects</a>
+    <a class="contact-me nav-link" routerLink="/#contact">Contact</a>
     <div class="d-flex slider-position">
       <p class="color-change-if-active">EN</p>
       <input type="range" min="1" max="10" value="1" class="slider" id="myRange" />
       <p class="color-change-if-active">DE</p>
     </div>
+    <div>
+      <button class="burger-menu" type="button" (click)="openMobileMenu($event)">
+        <img src="assets/icons/c_burgermenu.png" alt="burgermenu" />
+      </button>
+    </div>
   </nav>
+  <!-- Mobile Navigation Menu -->
+  <dialog #mobileNav>
+    <app-mobile-nav (close)="closeMobileMenu()"></app-mobile-nav>
+  </dialog>
+  <!-- Mobile Navigation Menu -->
   <section class="d-flex center">
     <div>
       <h1>Legal notice</h1>
-      <button class="close-legal" type="button" (click)="goHome()">Close</button>
     </div>
   </section>
 </header>
@@ -159,13 +168,13 @@
   <p class="black-txt">Date: 28.05.2026</p>
   <button class="close-legal-down" type="button" (click)="goHome()">Back to Main Page</button>
 </main>
+<div class="column d-flex legal">
+  <a href="#hero"><img class="logo" src="assets/icons/logo.png" alt="logo image" /></a>
+  <p class="black-txt">&copy; Felix Winkler 2026</p>
+</div>
 <footer class="footer d-flex">
-  <div class="column d-flex legal">
-    <a href="#hero"><img class="logo" src="assets/icons/logo.png" alt="logo image" /></a>
-    <p class="black-txt">&copy; Felix Winkler 2026</p>
-    <a class="imprint-link" routerLink="/">Home</a>
-  </div>
   <div class="space-around d-flex">
+    <a class="imprint-link" routerLink="/">Home</a>
     <a class="imprint-link" href="https://github.com/FelixWinklerDev" target="_blank">GitHub</a>
     <a
       class="imprint-link"

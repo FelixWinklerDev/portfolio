@@ -1,3 +1,9 @@
+h3,
+p {
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
 .d-flex {
   display: flex;
 }
@@ -29,11 +35,6 @@
 
 .sub-header {
   font-family: 'BricolageGrotesque-Regular';
-}
-
-.sub-txt {
-  font-family: 'BricolageGrotesque-Regular';
-  font-size: 1.8rem;
 }
 
 .positioning {
@@ -210,8 +211,6 @@
   }
 }
 
-// Media Query: Tablet on 768px
-
 @media (max-width: 769px) {
   .laptop {
     height: 270px;
@@ -225,15 +224,48 @@
 
   .sub-txt {
     width: 450px;
-}
-}
-
-// Media Query: Mobile L on 425px
-
-@media (max-width: 426px) {
+  }
 }
 
-// Media Query: Mobile M on 375px
+@media (max-width: 590px) {
+  .wrapper {
+    padding: 40px 0;
+  }
+
+  .positioning {
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .sub-txt {
+    width: 300px;
+  }
+}
+
+@media (max-width: 440px) {
+  .featured-project {
+    height: 250px;
+    width: 320px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .sticker {
+    height: 90px;
+    width: 90px;
+    transform: translate(0, -110px);
+  }
+
+  .laptop {
+    height: 250px;
+    width: 300px;
+    margin-left: 20px;
+  }
+}
 
 @media (max-width: 376px) {
   .laptop {
@@ -246,8 +278,6 @@
     width: 325px;
   }
 }
-
-// Media Query: Mobile S on 320px
 
 @media (max-width: 321px) {
   .laptop {

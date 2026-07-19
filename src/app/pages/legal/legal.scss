@@ -39,7 +39,7 @@
 
 .space-around {
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .right {
@@ -97,6 +97,7 @@
 
 .legal {
   width: 200px;
+  padding-left: 20px;
 }
 
 .about-me:hover {
@@ -124,6 +125,21 @@
 
 .important-words {
   color: var(--highlight_blue);
+}
+
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  &:hover {
+    opacity: 0.8;
+  }
+  img {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .close-legal {
@@ -162,22 +178,28 @@
   }
 }
 
-// Media Query: Tablet on 768px
-
 @media (max-width: 769px) {
+  .nav-link,
+  .slider-position,
+  .socialmedia {
+    display: none;
+  }
+
+  .center {
+    padding: 80px;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
 }
 
-// Media Query: Mobile L on 425px
-
-@media (max-width: 426px) {
-}
-
-// Media Query: Mobile M on 375px
-
-@media (max-width: 376px) {
-}
-
-// Media Query: Mobile S on 320px
-
-@media (max-width: 321px) {
+@media (max-width: 425px) {
+  .center {
+    padding: 80px 20px;
+  }
 }

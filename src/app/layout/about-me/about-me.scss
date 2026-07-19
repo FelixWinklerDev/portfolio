@@ -205,8 +205,8 @@
   }
 
   .paper-size {
-    transform: translateX(40px);
-    width: 320px;
+    transform: translateX(10px);
+    width: 300px;
   }
 
   .blue,
@@ -221,10 +221,5 @@
 @media (max-width: 321px) {
   .about-gap {
     width: 280px;
-  }
-
-  .paper-size {
-    transform: translateX(10px);
-    width: 300px;
   }
 }

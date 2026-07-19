@@ -320,8 +320,6 @@
   }
 }
 
-// Media Query: Tablet on 955px
-
 @media (max-width: 955px) {
   .right {
     margin-right: 20px;
@@ -332,22 +330,16 @@
   }
 
   .polaroid-wrapper {
-    left: 68%;
-  }
-
-  .polaroid-wrapper {
     left: 70%;
     top: 6%;
-    width: 280px;
+    width: 220px;
   }
 
   .felix {
     top: 5.9%;
-    right: 23%;
+    right: 1%;
   }
 }
-
-// Media Query: Tablet on 790px
 
 @media (max-width: 790px) {
   .nav-link,
@@ -379,14 +371,14 @@
   }
 
   .polaroid-wrapper {
-    left: 35%;
-    top: 45vh;
-    width: 280px;
+    left: 25%;
+    top: 40vh;
+    width: 200px;
   }
 
   .felix {
     top: 6%;
-    right: 40%;
+    right: 15%;
     width: 153px;
     height: 153px;
   }
@@ -408,10 +400,6 @@
     margin-right: 80px;
     justify-content: right;
   }
-
-  .polaroid-wrapper {
-    top: 40vh;
-  }
 }
 
 @media (max-width: 490px) {
@@ -423,8 +411,6 @@
     margin-left: 50px;
   }
 }
-
-// Media Query: Mobile L on 425px
 
 @media (max-width: 426px) {
   .upper-line {
@@ -440,14 +426,12 @@
   }
 }
 
-// Media Query: Mobile M on 375px
-
 @media (max-width: 376px) {
   .polaroid-wrapper {
     right: -24%;
   }
 
-    .upper-line {
+  .upper-line {
     padding-left: 40px;
   }
 
@@ -460,11 +444,9 @@
   }
 }
 
-// Media Query: Mobile S on 320px
-
 @media (max-width: 321px) {
   .polaroid-wrapper {
-    right: -34%;
+    left: 25%;
   }
 
   .right {

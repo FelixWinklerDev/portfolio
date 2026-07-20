@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { ProjectDetails, Project } from '../../pages/project-details/project-details';
+import { TranslationService } from '../../shared/services/translation.service';
 
 @Component({
   selector: 'app-projects',
@@ -10,7 +11,10 @@ import { ProjectDetails, Project } from '../../pages/project-details/project-det
 export class Projects {
   @ViewChild('projectDialog') projectDialog?: ElementRef<HTMLDialogElement>;
 
-  constructor(private cd: ChangeDetectorRef) {}
+  constructor(
+    private cd: ChangeDetectorRef,
+    public translationService: TranslationService,
+  ) {}
 
   selectedProject: Project | null = null;
 

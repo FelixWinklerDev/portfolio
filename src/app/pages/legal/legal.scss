@@ -100,20 +100,82 @@
   padding-left: 20px;
 }
 
-.about-me:hover {
+.about-me,
+.skills,
+.projects,
+.contact-me {
+  position: relative;
+}
+
+.about-me::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-image: url(assets/icons/aboutme_header_animation.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: translateX(0%);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  pointer-events: none;
+  z-index: -1;
 }
 
-.skills:hover {
+.skills::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-image: url(assets/icons/skill_header_animation.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: translateX(0%);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  pointer-events: none;
+  z-index: -1;
 }
 
-.projects:hover {
-  background-image: url(assets/icons/projekt_header_animation.png);
+.projects::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(assets/icons/project_header_animation.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: translateX(0%);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  pointer-events: none;
+  z-index: -1;
 }
 
-.contact-me:hover {
+.contact-me::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-image: url(assets/icons/contact_header_animation.png);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: translateX(0%);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.about-me:hover::before,
+.skills:hover::before,
+.projects:hover::before,
+.contact-me:hover:before {
+  opacity: 1;
 }
 
 .imprint-link {

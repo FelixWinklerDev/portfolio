@@ -1,14 +1,38 @@
 <header class="hero" id="hero">
   <nav class="navbar d-flex">
     <a routerLink="/"><img class="logo" src="assets/icons/logo.png" alt="logo" /></a>
-    <a class="about-me nav-link" href="#about">About Me</a>
-    <a class="skills nav-link" href="#skillset">Skills</a>
-    <a class="projects nav-link" href="#projects">Projects</a>
-    <a class="contact-me nav-link" href="#contact">Contact</a>
+    <a class="about-me nav-link" href="#about">{{
+      translationService.translate('header.nav.aboutMe')
+    }}</a>
+    <a class="skills nav-link" href="#skillset">{{
+      translationService.translate('header.nav.skills')
+    }}</a>
+    <a class="projects nav-link" href="#projects">{{
+      translationService.translate('header.nav.projects')
+    }}</a>
+    <a class="contact-me nav-link" href="#contact">{{
+      translationService.translate('header.nav.contact')
+    }}</a>
     <div class="d-flex slider-position">
-      <p class="color-change-if-active">EN</p>
-      <input type="range" min="1" max="10" value="1" class="slider" id="myRange" />
-      <p class="color-change-if-active">DE</p>
+      <button
+        type="button"
+        class="color-change-if-active"
+        [class.active-language]="isActiveLanguage('en')"
+        (click)="translationService.setLanguage('en')"
+      >
+        EN
+      </button>
+      <div class="slider-container" [class.is-de]="isActiveLanguage('de')">
+        <span class="slider-pill"></span>
+      </div>
+      <button
+        type="button"
+        class="color-change-if-active"
+        [class.active-language]="isActiveLanguage('de')"
+        (click)="translationService.setLanguage('de')"
+      >
+        DE
+      </button>
     </div>
     <div>
       <button class="burger-menu" (click)="openMobileMenu($event)">
@@ -55,7 +79,9 @@
       </h1>
     </div>
     <div class="right d-flex">
-      <a href="#contact" class="dark-bg-btn on-touch">Get in Touch</a>
+      <a href="#contact" class="dark-bg-btn on-touch">{{
+        translationService.translate('header.getInTouch')
+      }}</a>
     </div>
     <div class="socialmedia d-flex">
       <a

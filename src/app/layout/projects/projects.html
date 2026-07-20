@@ -1,36 +1,31 @@
 <section class="wrapper d-flex" id="projects">
   <div class="positioning">
-    <p class="black-txt sub-header">MY CRAFT</p>
-    <h2 class="black-txt">Projects</h2>
+    <p class="black-txt sub-header">{{ translationService.translate('projects.eyebrow') }}</p>
+    <h2 class="black-txt">{{ translationService.translate('projects.title') }}</h2>
     <img class="headline" src="assets/img/project-sub.png" alt="drawn line" />
-    <p class="black-txt sub-txt">
-      Every project is built with responsivnes, usability and attention to detail in mind. Feel free
-      to explore my work.
-    </p>
+    <p class="black-txt sub-txt">{{ translationService.translate('projects.description') }}</p>
   </div>
   <div class="positioning d-flex">
     <div class="d-flex" (click)="openProject(projects[0])">
       <div class="featured-project">
         <img class="laptop" src="assets/img/laptop.png" alt="Laptop with project" />
         <img class="sticker" src="assets/img/project-sticker.png" alt="sticker picture" />
-        <button id="projectBtn" class="dark-bg-btn">Project Details</button>
+        <button id="projectBtn" class="dark-bg-btn">
+          {{ translationService.translate('projects.details') }}
+        </button>
       </div>
     </div>
-    <h3 class="black-txt">Join</h3>
-    <p class="black-txt sub-txt">
-      a task manager inspired by the Kanban System. Create and organize tasks using drag and drop
-      functions, assign users and categories.
-    </p>
+    <h3 class="black-txt">{{ translationService.translate('projects.join.title') }}</h3>
+    <p class="black-txt sub-txt">{{ translationService.translate('projects.join.description') }}</p>
   </div>
   <div class="positioning d-flex">
     <div class="projects" (click)="openProject(projects[1])">
       <img class="project-image" src="assets/img/el-pollo.png" alt="project picture" />
       <button id="projectBtn" class="dark-bg-btn">Project Details</button>
     </div>
-    <h3 class="black-txt">El Pollo Loco</h3>
+    <h3 class="black-txt">{{ translationService.translate('projects.elPollo.title') }}</h3>
     <p class="black-txt sub-txt">
-      a simple 2-D Jump'n Run Game based on object-oriented approach. Jump on enemys and throw salsa
-      bottles at the Boss in the end.
+      {{ translationService.translate('projects.elPollo.description') }}
     </p>
   </div>
   <div class="positioning d-flex">
@@ -38,10 +33,9 @@
       <img class="project-image" src="assets/img/pokedex.png" alt="project picture" />
       <button id="projectBtn" class="dark-bg-btn">Project Details</button>
     </div>
-    <h3 class="black-txt">Pokédex</h3>
+    <h3 class="black-txt">{{ translationService.translate('projects.pokedex.title') }}</h3>
     <p class="black-txt sub-txt">
-      a simple Pokedex based on Poke-API and JavaScript. Search and inspect your favorite pokémon
-      from the first to the lastest editions.
+      {{ translationService.translate('projects.pokedex.description') }}
     </p>
   </div>
 </section>

@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/co
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { TranslationService } from '../../shared/services/translation.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -19,7 +20,10 @@ export class ContactMe {
   message: string = '';
   policyCheck: boolean = false;
 
-  constructor(private cd: ChangeDetectorRef) {}
+  constructor(
+    private cd: ChangeDetectorRef,
+    public translationService: TranslationService,
+  ) {}
 
   closeSuccessDialog() {
     this.successDialog?.nativeElement.close();

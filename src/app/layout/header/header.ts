@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild, ChangeDetectorRef } from '@angular/co
 import { CommonModule } from '@angular/common';
 import { MobileNav } from '../../pages/mobile-nav/mobile-nav';
 import { BlueBtnComponent } from '../../shared/components/blue-btn/blue-btn';
+import { TranslationService } from '../../shared/services/translation.service';
 
 interface InteractiveLetter {
   char: string;
@@ -14,14 +15,20 @@ interface InteractiveLetter {
   templateUrl: './header.html',
   styleUrls: ['./header.scss'],
 })
-
 export class Header {
   @ViewChild('mobileNav') mobileNav?: ElementRef<HTMLDialogElement>;
 
-  headerTitle1: InteractiveLetter[] = 'Frontend'.split('').map((char) => ({ char, hovered: false }));
-  headerTitle2: InteractiveLetter[] = 'DEVELOPER'.split('').map((char) => ({ char, hovered: false }));
+  headerTitle1: InteractiveLetter[] = 'Frontend'
+    .split('')
+    .map((char) => ({ char, hovered: false }));
+  headerTitle2: InteractiveLetter[] = 'DEVELOPER'
+    .split('')
+    .map((char) => ({ char, hovered: false }));
 
-  constructor(private cd: ChangeDetectorRef) {}
+  constructor(
+    private cd: ChangeDetectorRef,
+    public translationService: TranslationService,
+  ) {}
 
   openMobileMenu(event: MouseEvent) {
     event.preventDefault();
@@ -43,5 +50,13 @@ export class Header {
 
   private toggleCase(value: string) {
     return value === value.toLowerCase() ? value.toUpperCase() : value.toLowerCase();
+  }
+
+  toggleLanguage() {
+    this.translationService.toggleLanguage();
+  }
+
+  isActiveLanguage(language: 'en' | 'de') {
+    return this.translationService.getLanguage() === language;
   }
 }

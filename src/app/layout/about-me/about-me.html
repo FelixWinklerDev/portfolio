@@ -3,32 +3,28 @@
     <div class="yellow d-flex">
       <img class="paper-size" src="assets/img/yellow_paper.png" alt="yellow paper" />
       <img class="icons" src="assets/icons/location.png" alt="location marker" />
-      <p class="yellow-txt d-flex">Based in Gräfenhainichen</p>
+      <p class="yellow-txt d-flex">{{ translationService.translate('aboutMe.location') }}</p>
     </div>
     <div class="blue d-flex">
       <img class="paper-size" src="assets/img/blue_paper.png" alt="blue paper" />
       <img class="icons" src="assets/icons/a-b.png" alt="distance" />
-      <p class="blue-txt d-flex">location-bound</p>
+      <p class="blue-txt d-flex">{{ translationService.translate('aboutMe.availability') }}</p>
     </div>
     <div class="orange d-flex">
       <img class="paper-size" src="assets/img/orange_paper.png" alt="orange paper" />
       <img class="icons" src="assets/icons/house.png" alt="house icon" />
-      <p class="orange-txt d-flex">working remote/hybrid</p>
+      <p class="orange-txt d-flex">{{ translationService.translate('aboutMe.workMode') }}</p>
     </div>
   </div>
   <div class="text-position d-flex">
-    <h3 class="black-txt">Who's Felix?</h3>
-    <h2 class="black-txt">About me</h2>
+    <h3 class="black-txt">{{ translationService.translate('aboutMe.subtitle') }}</h3>
+    <h2 class="black-txt">{{ translationService.translate('aboutMe.title') }}</h2>
     <div class="about-gap">
-      <p class="black-txt">
-        Hey, I'm Felix, a 29 years old family father straight from Saxony-Anhalt, Germany. I love
-        creating bugs, playful UI / UX design and creative web projects. Right now I'm diving deep
-        into frontend developement with Angular, TypeScript & SCSS while trying to improve my skills
-        every day. I have already been able to gain some project experiences: Independently and in a
-        group.
-      </p>
+      <p class="black-txt">{{ translationService.translate('aboutMe.intro') }}</p>
       <div class="right-bound d-flex">
-        <a href="#contact" class="light-bg-btn talk">Get in Touch</a>
+        <a href="#contact" class="light-bg-btn talk">{{
+          translationService.translate('aboutMe.cta')
+        }}</a>
       </div>
     </div>
   </div>

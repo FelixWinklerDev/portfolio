@@ -2,8 +2,8 @@
   <section class="main-wrapper d-flex">
     <div class="d-flex space">
       <div class="header-container">
-        <h3>Contact me</h3>
-        <h2>Ready to work together?</h2>
+        <h3>{{ translationService.translate('contact.eyebrow') }}</h3>
+        <h2>{{ translationService.translate('contact.title') }}</h2>
       </div>
       <div class="d-flex sticker-container">
         <svg class="circle" viewBox="0 0 100 100" width="168" height="168">
@@ -23,76 +23,83 @@
     </div>
     <div class="text-form-container d-flex">
       <div class="sub-text-container">
-        <p>
-          I am excited to dive into the professional tech market. During my rigorous journey, I
-          gained deep, practical experience building applications with HTML, CSS/SASS, JavaScript,
-          TypeScript, and Angular. I am confident in my abilities to make a meaningful contribution
-          to a development team by combining my foundational expertise with an absolute enthusiasm
-          for continuous learning and skill improvement. I am highly motivated to bring fresh value,
-          clean code, and a strong collaborative spirit to a new project.
-        </p>
+        <p>{{ translationService.translate('contact.intro') }}</p>
         <div class="right d-flex">
           <img class="line" src="assets/icons/contact_line.png" alt="" />
         </div>
       </div>
       <div class="form">
         <form (ngSubmit)="submitForm()" class="gap d-flex column">
-          <label for="name">What's your name?</label><br />
+          <label for="name">{{ translationService.translate('contact.form.nameLabel') }}</label
+          ><br />
           <input
             class="text-field"
             type="text"
             id="fname"
             name="fname"
-            placeholder="Your name goes here"
+            [attr.placeholder]="translationService.translate('contact.form.namePlaceholder')"
             [(ngModel)]="fname"
             required
           />
           <span class="requirement" [class.visible]="showValidationError('fname')">
-            Please enter your name. </span
+            {{ translationService.translate('contact.form.nameError') }} </span
           ><br />
-          <label for="email">What's your email?</label><br />
+          <label for="email">{{ translationService.translate('contact.form.emailLabel') }}</label
+          ><br />
           <input
             class="text-field"
             type="email"
             id="email"
             name="email"
-            placeholder="yourmail@email.com"
+            [attr.placeholder]="translationService.translate('contact.form.emailPlaceholder')"
             [(ngModel)]="email"
             required
             autocomplete="email"
           />
           <span class="requirement" [class.visible]="showValidationError('email')">
-            Please enter your e-mail. </span
+            {{ translationService.translate('contact.form.emailError') }} </span
           ><br />
-          <label for="message">How can i help you?</label><br />
+          <label for="message">{{
+            translationService.translate('contact.form.messageLabel')
+          }}</label
+          ><br />
           <input
             class="text-field"
             type="text"
             id="message"
             name="message"
-            placeholder="Hello Felix, I am interested in ..."
+            [attr.placeholder]="translationService.translate('contact.form.messagePlaceholder')"
             [(ngModel)]="message"
             required
           />
           <span class="requirement" [class.visible]="showValidationError('message')">
-            Please enter at least 10 characters.
+            {{ translationService.translate('contact.form.messageError') }}
           </span>
           <br />
           <div>
             <input type="checkbox" id="policy-check" name="policy" [(ngModel)]="policyCheck" />
             <label class="policy-txt" for="policy-check">
-              I've read the
-              <a class="policy-link" routerLink="/legal">privacy policy</a> and
-              agree the processing of my data as outlined.</label
+              {{ translationService.translate('contact.form.policyText') }}
+              <a class="policy-link" routerLink="/legal">{{
+                translationService.translate('contact.form.policyLink')
+              }}</a>
+              {{ translationService.translate('contact.form.policyAgreement') }}</label
             >
           </div>
           <span class="requirement" [class.visible]="!policyCheck">
-            Please accept the privacy policy.
+            {{ translationService.translate('contact.form.policyError') }}
           </span>
         </form>
         <div class="d-flex right">
           <img class="line-mobile" src="assets/icons/contact_line.png" alt="" />
-          <button type="button" [disabled]="!isFormValid()" class="send-button" (click)="submitForm()">Send</button>
+          <button
+            type="button"
+            [disabled]="!isFormValid()"
+            class="send-button"
+            (click)="submitForm()"
+          >
+            {{ translationService.translate('contact.form.submit') }}
+          </button>
         </div>
       </div>
     </div>
@@ -112,10 +119,12 @@
 </section>
 <dialog #successDialog class="success-dialog">
   <div class="success-content">
-    <h3>Your message was sent</h3>
-    <p>Thanks — your message has been sent. I'll get back to you soon.</p>
+    <h3>{{ translationService.translate('contact.success.title') }}</h3>
+    <p>{{ translationService.translate('contact.success.message') }}</p>
     <div class="actions">
-      <button class="close-btn" (click)="closeSuccessDialog()">Close</button>
+      <button class="close-btn" (click)="closeSuccessDialog()">
+        {{ translationService.translate('contact.success.close') }}
+      </button>
     </div>
   </div>
 </dialog>

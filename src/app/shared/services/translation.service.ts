@@ -101,7 +101,7 @@ export class TranslationService {
         subtitle: 'Wer ist Felix?',
         intro:
           'Hallo, ich bin Felix, ein 29-jähriger Familienvater aus Sachsen-Anhalt, Deutschland. Ich liebe das Erstellen von Bugs, spielerisches UI-/UX-Design und kreative Webprojekte. Gerade tauche ich tief in die Frontend-Entwicklung mit Angular, TypeScript und SCSS ein und versuche, meine Skills jeden Tag zu verbessern. Ich habe bereits einige Projekterfahrungen sammeln können: sowohl selbstständig als auch im Team.',
-        location: 'Basierend in Gräfenhainichen',
+        location: 'Wohnhaft in Gräfenhainichen',
         workMode: 'remote/hybrid arbeiten',
         availability: 'standortgebunden',
         cta: 'Kontakt aufnehmen',

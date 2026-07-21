@@ -52,16 +52,39 @@
 }
 
 .center {
-  padding: 144px 120px;
+  padding: 80px 80px;
 }
 
 .color-change-if-active {
-  color: orange;
+  background-color: var(--transparence);
+  color: var(--main_white);
 }
 
-.slider {
+.color-change-if-active.active-language {
+  color: #f6c418;
+}
+
+.slider-container {
   width: 40px;
-  height: 20px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--main_white);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider-pill {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--highlight_blue);
+  transform: translateX(-2px); 
+  transition: transform 0.3s ease;
+}
+
+.slider-container.is-de .slider-pill {
+  transform: translateX(30px); 
 }
 
 .slider-position {

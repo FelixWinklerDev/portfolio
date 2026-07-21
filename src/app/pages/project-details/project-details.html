@@ -1,16 +1,48 @@
 <main class="project-detail-wrapper">
   <nav class="navbar d-flex">
-    <a href="#hero"><img class="logo" src="assets/icons/logo.png" alt="logo" /></a>
-    <a class="about-me nav-link black-txt" href="">About Me</a>
-    <a class="skills nav-link black-txt" href="">Skills</a>
-    <a class="projects nav-link" href="">Projects</a>
-    <a class="contact-me nav-link" href="">Contact</a>
+    <a routerLink="/"><img class="logo" src="assets/icons/logo.png" alt="logo" /></a>
+    <a class="about-me nav-link" href="#about">{{
+      translationService.translate('header.nav.aboutMe')
+    }}</a>
+    <a class="skills nav-link" href="#skillset">{{
+      translationService.translate('header.nav.skills')
+    }}</a>
+    <a class="projects nav-link" href="#projects">{{
+      translationService.translate('header.nav.projects')
+    }}</a>
+    <a class="contact-me nav-link" href="#contact">{{
+      translationService.translate('header.nav.contact')
+    }}</a>
     <div class="d-flex slider-position">
-      <p class="color-change-if-active">EN</p>
-      <input type="range" min="1" max="10" value="1" class="slider" id="myRange" />
-      <p class="color-change-if-active">DE</p>
+      <button
+        type="button"
+        class="color-change-if-active"
+        [class.active-language]="isActiveLanguage('en')"
+        (click)="translationService.setLanguage('en')"
+      >
+        EN
+      </button>
+      <div class="slider-container" [class.is-de]="isActiveLanguage('de')">
+        <span class="slider-pill"></span>
+      </div>
+      <button
+        type="button"
+        class="color-change-if-active"
+        [class.active-language]="isActiveLanguage('de')"
+        (click)="translationService.setLanguage('de')"
+      >
+        DE
+      </button>
+    </div>
+    <div>
+      <button class="burger-menu" (click)="openMobileMenu($event)">
+        <img src="assets/icons/c_burgermenu.png" alt="burgermenu" />
+      </button>
     </div>
   </nav>
+  <dialog #mobileNav>
+    <app-mobile-nav (close)="closeMobileMenu()"></app-mobile-nav>
+  </dialog>
   <div class="d-flex center-btn">
     <img class="arrow" src="assets/icons/back-project-details-arrow.png" alt="arrow icon left" />
     <button class="back-btn" id="backButton" (click)="close.emit()">Go Back</button>
@@ -18,15 +50,35 @@
   <section class="details-wrapper d-flex">
     <div class="content">
       <div class="project-name-wrapper">
-        <h2 class="black-txt">{{ project?.name }}</h2>
+        <h2 class="black-txt">
+          {{ translationService.translate('projectDetails.' + projectKey + '.title') }}
+        </h2>
         <img class="underline" src="assets/img/underline-projectname.png" alt="underline" />
       </div>
-      <h3 class="black-txt">Description</h3>
-      <p class="black-txt">{{ project?.description }}</p>
-      <h3 class="black-txt">Implementation Details</h3>
-      <p class="black-txt">{{ project?.details }}</p>
-      <p class="black-txt">Duration: {{ project?.duration }} weeks</p>
-      <p class="black-txt">Technologies: {{ project?.technologies }}</p>
+      <h3 class="black-txt">
+        {{ translationService.translate('projectDetails.descriptionTitle') }}
+      </h3>
+      <p class="black-txt">
+        {{ translationService.translate('projectDetails.' + projectKey + '.description') }}
+      </p>
+      <h3 class="black-txt">
+        {{ translationService.translate('projectDetails.implementationDetailsTitle') }}
+      </h3>
+      <div class="placeholder-container">
+        <p class="black-txt">
+          {{
+            translationService.translate('projectDetails.' + projectKey + '.implementationDetails')
+          }}
+        </p>
+      </div>
+      <p class="black-txt">
+        {{ translationService.translate('projectDetails.durationtitle') }}
+        {{ translationService.translate('projectDetails.' + projectKey + '.duration') }}
+      </p>
+      <p class="black-txt">
+        {{ translationService.translate('projectDetails.technologiesTitle') }}
+        {{ translationService.translate('projectDetails.' + projectKey + '.technologies') }}
+      </p>
     </div>
     <div class="content">
       <div class="d-flex">

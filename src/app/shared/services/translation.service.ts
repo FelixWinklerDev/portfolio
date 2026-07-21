@@ -56,6 +56,42 @@ export class TranslationService {
             'a simple Pokedex based on Poke-API and JavaScript. Search and inspect your favorite pokémon from the first to the lastest editions.',
         },
       },
+      projectDetails: {
+        descriptionTitle: 'Description',
+        implementationDetailsTitle: 'Implementation Details',
+        durationtitle: 'Duration:',
+        technologiesTitle: 'Technologies:',
+        goBack: 'Go Back',
+        nextProject: 'next Project',
+        livetest: 'Live Test',
+        join: {
+          title: 'Join',
+          description:
+            'a task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+          implementationDetails:
+            'My focus in this Project was in state management and UI interactivity. This is a group Project and developed a functional task management system using Angular and TypeScript to handle dynamic "To-Do","In Progress" and "Done" states. Also we implemented drag-and-drop functionality and used LocalStorage to ensure data persistence, demonstrating a structured approach to user data and workflow organization.',
+          duration: '5 weeks',
+          technologies: 'HTML, CSS, Angular, TypeScript',
+        },
+        elPollo: {
+          title: 'El Pollo Loco',
+          description:
+            'a simple 2-D Jump and Run Browsergame based on object-oriented approach. Jump on enemys and throw salsa bottles at the Boss in the end.',
+          implementationDetails:
+            'My focus in this Project was in Logic, physics, and object-oriented programming (OOP). I built a browser-based game using a canvas-based rendering loop with HTML, CSS, and Vanilla JavaScript. Also i designed custom logic for collision detection, gravity physics, and character animations, showcasing the ability to solve complex algorithmic problems independently.',
+          duration: '5 weeks',
+          technologies: 'HTML, CSS, JavaScript',
+        },
+        pokedex: {
+          title: 'Pokédex',
+          description:
+            'a simple Pokedex based on Poke-API and JavaScript. Search and inspect your favorite pokémon from the first to the lastest editions.',
+          implementationDetails:
+            'My focus in this Project was Asynchronous programming and data integration. I created a dynamic search tool that fetches and parses data from the RESTful PokéAPI using async/await and the Fetch API. On handling asynchronous data streams and mapping complex JSON objects to a clean, responsive UI, highlighting efficiency in working with external data sources..',
+          duration: '2 weeks',
+          technologies: 'HTML, CSS, JavaScript, REST-API',
+        },
+      },
       contact: {
         eyebrow: 'Contact me',
         title: 'Ready to work together?',
@@ -133,6 +169,42 @@ export class TranslationService {
           title: 'Pokédex',
           description:
             'ein einfacher Pokédex basierend auf der Poke-API und JavaScript. Suche und inspiziere deine Lieblings-Pokémon von der ersten bis zur neuesten Edition.',
+        },
+      },
+      projectDetails: {
+        descriptionTitle: 'Beschreibung',
+        implementationDetailsTitle: 'Implementierungs Details',
+        durationtitle: 'Dauer:',
+        technologiesTitle: 'Technologien:',
+        goBack: 'Zurück zur Hauptseite',
+        nextProject: 'Nächstes Projekt',
+        livetest: 'Echtzeittest',
+        join: {
+          title: 'Join',
+          description:
+            'ein Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Nutzer und Kategorien zu.',
+          implementationDetails:
+            'Mein Schwerpunkt bei diesem Projekt lag auf dem State-Management und der Interaktivität der Benutzeroberfläche. Im Rahmen dieses Gruppenprojekts entwickelten wir ein funktionales Aufgabenverwaltungssystem mit Angular und TypeScript, das die dynamischen Status „To-Do“, „In Progress“ und „Done“ abbildet. Zudem implementierten wir eine Drag-and-Drop-Funktionalität und nutzten LocalStorage zur Datenspeicherung, womit wir einen strukturierten Ansatz für den Umgang mit Benutzerdaten und die Organisation von Arbeitsabläufen demonstrierten.',
+          duration: '5 Wochen',
+          technologies: 'HTML, CSS, Angular, TypeScript',
+        },
+        elPollo: {
+          title: 'El Pollo Loco',
+          description:
+            'ein einfaches 2D-Jump-and-Run-Spiel auf OOP-Basis. Springe auf Gegner und wirf Salsa-Flaschen auf den Boss am Ende.',
+          implementationDetails:
+            'Mein Schwerpunkt bei diesem Projekt lag auf Logik, Physik und objektorientierter Programmierung (OOP). Ich entwickelte ein browserbasiertes Spiel unter Verwendung einer Canvas-basierten Rendering-Schleife sowie HTML, CSS und Vanilla JavaScript. Zudem entwarf ich eine eigene Logik für Kollisionserkennung, Gravitationsphysik und Charakteranimationen und stellte damit meine Fähigkeit unter Beweis, komplexe algorithmische Probleme eigenständig zu lösen.',
+          duration: '3 Wochen',
+          technologies: 'HTML, CSS, JavaScript',
+        },
+        pokedex: {
+          title: 'Pokédex',
+          description:
+            'ein einfacher Pokédex basierend auf der Poke-API und JavaScript. Suche und inspiziere deine Lieblings-Pokémon von der ersten bis zur neuesten Edition.',
+          implementationDetails:
+            'Der Schwerpunkt dieses Projekts lag auf asynchroner Programmierung und Datenintegration. Ich entwickelte ein dynamisches Suchtool, das mithilfe von async/await und der Fetch-API Daten von der RESTful PokéAPI abruft und verarbeitet. Dabei standen die Handhabung asynchroner Datenströme sowie die Überführung komplexer JSON-Objekte in eine übersichtliche, responsive Benutzeroberfläche im Vordergrund, wobei besonderer Wert auf eine effiziente Anbindung externer Datenquellen gelegt wurde.',
+          duration: '2 Wochen',
+          technologies: 'HTML, CSS, JavaScript, REST-API',
         },
       },
       contact: {

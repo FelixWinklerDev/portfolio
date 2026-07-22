@@ -1,19 +1,43 @@
 <section class="mobile-nav-wrapper">
   <div class="headline d-flex">
-    <a href="#hero"><img class="logo" src="assets/icons/logo.png" alt="logo" /></a>
+    <a routerLink="/"><img class="logo" src="assets/icons/logo.png" alt="logo" /></a>
     <button class="close" (click)="close.emit()">
       <img src="assets/icons/c_close_menu.png" alt="" />
     </button>
   </div>
   <nav class="mobile-nav d-flex">
-    <a class="mobile-nav-link" href="#about" (click)="close.emit()">About Me</a>
-    <a class="mobile-nav-link" href="#skillset" (click)="close.emit()">Skills</a>
-    <a class="mobile-nav-link" href="#projects" (click)="close.emit()">Projects</a>
-    <a class="mobile-nav-link" href="#contact" (click)="close.emit()">Contact</a>
-    <div class="d-flex mobile-slider-position">
-      <p class="color-change-if-active">EN</p>
-      <input type="range" min="1" max="10" value="1" class="slider" id="myRange" />
-      <p class="color-change-if-active">DE</p>
+    <a class="about-me nav-link" href="#about">{{
+      translationService.translate('header.nav.aboutMe')
+    }}</a>
+    <a class="skills nav-link" href="#skillset">{{
+      translationService.translate('header.nav.skills')
+    }}</a>
+    <a class="projects nav-link" href="#projects">{{
+      translationService.translate('header.nav.projects')
+    }}</a>
+    <a class="contact-me nav-link" href="#contact">{{
+      translationService.translate('header.nav.contact')
+    }}</a>
+    <div class="d-flex slider-position">
+      <button
+        type="button"
+        class="color-change-if-active"
+        [class.active-language]="isActiveLanguage('en')"
+        (click)="translationService.setLanguage('en')"
+      >
+        EN
+      </button>
+      <div class="slider-container" [class.is-de]="isActiveLanguage('de')">
+        <span class="slider-pill"></span>
+      </div>
+      <button
+        type="button"
+        class="color-change-if-active"
+        [class.active-language]="isActiveLanguage('de')"
+        (click)="translationService.setLanguage('de')"
+      >
+        DE
+      </button>
     </div>
     <div class="mobile-socialmedia d-flex">
       <a

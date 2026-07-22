@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Testimonials } from '../../layout/testimonials/testimonials';
 
 @Injectable({ providedIn: 'root' })
 export class TranslationService {
@@ -79,7 +80,7 @@ export class TranslationService {
             'a simple 2-D Jump and Run Browsergame based on object-oriented approach. Jump on enemys and throw salsa bottles at the Boss in the end.',
           implementationDetails:
             'My focus in this Project was in Logic, physics, and object-oriented programming (OOP). I built a browser-based game using a canvas-based rendering loop with HTML, CSS, and Vanilla JavaScript. Also i designed custom logic for collision detection, gravity physics, and character animations, showcasing the ability to solve complex algorithmic problems independently.',
-          duration: '5 weeks',
+          duration: '3 weeks',
           technologies: 'HTML, CSS, JavaScript',
         },
         pokedex: {
@@ -87,10 +88,26 @@ export class TranslationService {
           description:
             'a simple Pokedex based on Poke-API and JavaScript. Search and inspect your favorite pokémon from the first to the lastest editions.',
           implementationDetails:
-            'My focus in this Project was Asynchronous programming and data integration. I created a dynamic search tool that fetches and parses data from the RESTful PokéAPI using async/await and the Fetch API. On handling asynchronous data streams and mapping complex JSON objects to a clean, responsive UI, highlighting efficiency in working with external data sources..',
+            'My focus in this Project was Asynchronous programming and data integration. I created a dynamic search tool that fetches and parses data from the RESTful PokéAPI using async/await and the Fetch API. On handling asynchronous data streams and mapping complex JSON objects to a clean, responsive UI, highlighting efficiency in working with external data sources.',
           duration: '2 weeks',
           technologies: 'HTML, CSS, JavaScript, REST-API',
         },
+      },
+      testimonials: {
+        eyebrow: 'IN THEIR WORDS:',
+        title: 'Coleguess Thoughts',
+        profile: 'Profile',
+        quotes: [
+          {
+            text: 'To my experience, Felix is a motivated, fast learning individual. He is quick to grasp even complex mechanics and knows how to apply them proficiently. Helpful and highly organized, he is a joy to work with.',
+          },
+          {
+            text: 'Felix is extremely driven and focused. He has a great ability to maintain a clear view of the big picture, even with complex tasks, and works toward goals efficiently. At the same time, he is an absolute team player: communicative, friendly, and highly productive. I highly recommend Felix to any development team!',
+          },
+          {
+            text: 'I really enjoyed working with Felix on our Join project at Developer Akademie. From day one, he was easy to work with, supportive, and always ready to take responsibility. His positive attitude, willingness to learn, and great communication helped our team collaborate smoothly. I would recommend him to anyone looking for a motivated and dependable Developer.',
+          },
+        ],
       },
       contact: {
         eyebrow: 'Contact me',
@@ -115,7 +132,7 @@ export class TranslationService {
         },
         success: {
           title: 'Your message was sent',
-          message: "Thanks — your message has been sent. I'll get back to you soon.",
+          message: "Thank you. Your message has been sent. I'll get back to you soon.",
           close: 'Close',
         },
       },
@@ -136,7 +153,7 @@ export class TranslationService {
         title: 'Über mich',
         subtitle: 'Wer ist Felix?',
         intro:
-          'Hallo, ich bin Felix, ein 29-jähriger Familienvater aus Sachsen-Anhalt, Deutschland. Ich liebe das Erstellen von Bugs, spielerisches UI-/UX-Design und kreative Webprojekte. Gerade tauche ich tief in die Frontend-Entwicklung mit Angular, TypeScript und SCSS ein und versuche, meine Skills jeden Tag zu verbessern. Ich habe bereits einige Projekterfahrungen sammeln können: sowohl selbstständig als auch im Team.',
+          'Hallo, ich bin Felix, ein 29-jähriger Familienvater aus Sachsen-Anhalt, Deutschland. Ich liebe das Erstellen von Bugs (und sie zu fixen!), spielerisches UI-/UX-Design und kreative Webprojekte. Gerade tauche ich tief in die Frontend-Entwicklung mit Angular, TypeScript und SCSS ein und versuche, meine Skills jeden Tag zu verbessern. Ich habe bereits einige Projekterfahrungen sammeln können: sowohl selbstständig als auch im Team.',
         location: 'Wohnhaft in Gräfenhainichen',
         workMode: 'remote/hybrid arbeiten',
         availability: 'standortgebunden',
@@ -207,6 +224,22 @@ export class TranslationService {
           technologies: 'HTML, CSS, JavaScript, REST-API',
         },
       },
+      testimonials: {
+        eyebrow: 'In ihren Worten:',
+        title: 'Das sagen Kolleg*innen',
+        profile: 'Profil',
+        quotes: [
+          {
+            text: 'Meiner Erfahrung nach ist Felix ein motivierter und schnell lernender Entwickler. Er erfasst selbst komplexe Zusammenhänge rasch und weiß sie gekonnt umzusetzen. Er ist Hilfsbereit und top organisiert. Es macht einfach großen Spaß, mit ihm zu arbeiten.',
+          },
+          {
+            text: 'Felix ist extrem zielstrebig und fokussiert. Er behält selbst bei komplexen Aufgaben immer den Überblick und arbeitet effizient auf Ergebnisse hin. Gleichzeitig ist er ein absoluter Teamplayer: kommunikativ, freundlich und hochproduktiv. Ich kann Felix jedem Entwicklerteam wärmstens empfehlen!',
+          },
+          {
+            text: 'Die Zusammenarbeit mit Felix an unserem Projekt „Join“ bei der Developer Akademie hat wirklich sehr viel Spaß gemacht. Vom ersten Tag an war er aufgeschlossen, hilfsbereit und stets bereit, Verantwortung zu übernehmen. Seine positive Einstellung, seine Lernbereitschaft und seine großartige Kommunikation haben dazu beigetragen, dass unser Team reibungslos zusammenarbeiten konnte. Ich kann ihn jedem empfehlen, der auf der Suche nach einem motivierten und zuverlässigen Entwickler ist.',
+          },
+        ],
+      },
       contact: {
         eyebrow: 'Kontakt',
         title: 'Bereit, zusammen zu arbeiten?',
@@ -230,7 +263,7 @@ export class TranslationService {
         },
         success: {
           title: 'Ihre Nachricht wurde versendet',
-          message: 'Danke — Ihre Nachricht wurde gesendet. Ich melde mich bald bei Ihnen.',
+          message: 'Danke. Deine Nachricht wurde versendet. Ich melde mich bald bei dir.',
           close: 'Schließen',
         },
       },

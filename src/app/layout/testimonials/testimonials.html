@@ -2,19 +2,19 @@
   <div class="header-testimonial d-flex">
     <div class="d-flex">
       <img class="arrow" src="assets/img/testimonials_arrow.png" alt="" />
-      <p class="black-txt">IN THEIR WORDS:</p>
+      <p class="black-txt">{{ translationService.translate('testimonials.eyebrow') }}</p>
     </div>
-    <h2 class="black-txt">Colleagues' Thoughts</h2>
+    <h2 class="black-txt">{{ translationService.translate('testimonials.title') }}</h2>
   </div>
   <div class="d-flex center mobile">
     <div class="container left">
       <img class="paper" src="assets/img/testimonial-paper.png" alt="paper with text" />
       <div class="text-position">
-        <p class="black-txt sub-txt">
-          To my experience, Felix is a motivated, fast learning individual. He's quick to grasp even
-          complex mechanics and knows how to apply them proficiently. Helpful and highly organized,
-          he is a joy to work with.
-        </p>
+        <div class="overflow-container">
+          <p class="black-txt sub-txt">
+            {{ translationService.translate('testimonials.quotes.0.text') }}
+          </p>
+        </div>
         <div class="d-flex space-between">
           <div>
             <h3 class="black-txt">Björn Sagmeister</h3>
@@ -27,7 +27,7 @@
               href="https://www.linkedin.com/in/bj%C3%B6rn-sagmeister-358558a5/"
             >
               <img class="icon" src="assets/icons/linkedin-icon.png" alt="" />
-              Profile
+              {{ translationService.translate('testimonials.profile') }}
             </a>
           </div>
         </div>
@@ -36,12 +36,11 @@
     <div class="container mid">
       <img class="paper" src="assets/img/testimonial-paper.png" alt="paper with text" />
       <div class="text-position">
-        <p class="black-txt sub-txt">
-          Felix is extremely driven and focused. He has a great ability to maintain a clear view of
-          the big picture, even with complex tasks, and works toward goals efficiently. At the same
-          time, he is an absolute team player: communicative, friendly, and highly productive. I
-          highly recommend Felix to any development team!
-        </p>
+        <div class="overflow-container">
+          <p class="black-txt sub-txt">
+            {{ translationService.translate('testimonials.quotes.1.text') }}
+          </p>
+        </div>
         <div class="d-flex space-between">
           <div>
             <h3 class="black-txt">Waldemar Chorow</h3>
@@ -54,7 +53,7 @@
               href="https://www.linkedin.com/in/waldemar-chorow-11460a31b/"
             >
               <img class="icon" src="assets/icons/linkedin-icon.png" alt="" />
-              Profile
+              {{ translationService.translate('testimonials.profile') }}
             </a>
           </div>
         </div>
@@ -63,21 +62,21 @@
     <div class="container right">
       <img class="paper" src="assets/img/testimonial-paper.png" alt="paper with text" />
       <div class="text-position">
-        <p class="black-txt sub-txt">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam a labore iste laudantium
-          ipsum deserunt numquam.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam a
-          labore iste laudantium ipsum deserunt numquam.
-        </p>
+        <div class="overflow-container">
+          <p class="black-txt sub-txt">
+            {{ translationService.translate('testimonials.quotes.2.text') }}
+          </p>
+        </div>
         <div class="d-flex space-between">
           <div>
-            <h3 class="black-txt">Felix Winkler</h3>
+            <h3 class="black-txt">Jana Schaaf</h3>
             <h3 class="black-txt sub-header">Frontend Developer</h3>
           </div>
           <div class="d-flex d-flex a-end space">
-            <a class="black-txt" target="_blank" href="">
-              <img class="icon" src="assets/icons/linkedin-icon.png" alt="" />
-              Profile
-            </a>
+            <p class="black-txt no-profile">
+              <img class="icon disabled" src="assets/icons/linkedin-icon.png" alt="" />
+              {{ translationService.translate('testimonials.profile') }}
+            </p>
           </div>
         </div>
       </div>

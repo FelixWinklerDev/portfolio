@@ -17,9 +17,41 @@
   }
 }
 
-.slider {
+.color-change-if-active {
+  background-color: var(--transparence);
+  color: var(--main_white);
+}
+
+.color-change-if-active.active-language {
+  color: var(--highlight_orange);
+}
+
+.slider-container {
   width: 40px;
-  height: 20px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--main_white);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider-pill {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--highlight_blue);
+  transform: translateX(-2px); 
+  transition: transform 0.3s ease;
+}
+
+.slider-container.is-de .slider-pill {
+  transform: translateX(30px); 
+}
+
+.slider-position {
+  align-items: center;
+  gap: 15px;
 }
 
 .mobile-nav-wrapper {

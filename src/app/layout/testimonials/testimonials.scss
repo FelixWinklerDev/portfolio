@@ -47,16 +47,19 @@
 .arrow {
   width: 100px;
   height: 36px;
-}
-
-.text-position {
-  transform: translateY(-285px) translateX(15px);
+  animation-name: draw;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
 }
 
 .overflow-container {
   min-height: 150px;
   max-height: 170px;
-  overflow: scroll;
+  overflow-y: scroll;
   scrollbar-width: none;
 }
 
@@ -70,20 +73,16 @@
 
 .wrapper {
   width: 100%;
-  padding-top: 144px;
+  padding: 144px 0;
 }
 
 .container {
-  height: 100%;
-  width: 420px;
-  border-radius: 15px;
-  padding: 50px;
-}
-
-.paper {
+  position: relative;
   height: 310px;
   width: 450px;
-  position: relative;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 50px;
   &::after {
     content: '';
     position: absolute;
@@ -91,14 +90,31 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(assets/img/hover.png);
-    background-size: cover;
+    background-image: url('assets/img/hover.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none;
   }
   &:hover::after {
     opacity: 1;
   }
+}
+
+.text-position {
+  position: relative;
+  z-index: 2;
+}
+
+.paper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
 .left {
@@ -127,6 +143,15 @@
   }
 }
 
+@keyframes draw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 @media (max-width: 1400px) {
   .mobile {
     flex-direction: column;
@@ -134,7 +159,6 @@
 
   .container {
     height: 355px;
-    padding: 0;
   }
 
   .left {
@@ -165,7 +189,6 @@
   .container {
     height: 330px;
     width: 380px;
-    padding: 0;
   }
 
   .header-testimonial {
@@ -182,10 +205,7 @@
   .container {
     height: 230px;
     width: 240px;
-  }
-
-  .text-position {
-    transform: translateY(-220px) translateX(10px);
+    padding: 5px 10px;
   }
 
   .overflow-container {
@@ -208,10 +228,6 @@
   .container {
     height: 230px;
     width: 240px;
-  }
-
-  .text-position {
-    transform: translateY(-240px) translateX(5px);
   }
 
   .sub-txt {

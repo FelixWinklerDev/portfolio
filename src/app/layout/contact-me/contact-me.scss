@@ -20,6 +20,7 @@
 
 .right {
   justify-content: right;
+  gap: 20px;
 }
 
 .center {
@@ -61,6 +62,7 @@
 
 .sticker-container {
   position: relative;
+  padding: 0 20px;
 }
 
 .sticker {
@@ -69,7 +71,7 @@
 }
 
 .circle {
-  transform: translateX(167px);
+  transform: translateX(168px);
 }
 
 .policy-link {
@@ -87,6 +89,13 @@
 .line-mobile {
   display: none;
   width: 230px;
+  animation-name: draw;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
 }
 
 .logo {
@@ -116,6 +125,13 @@
 .line {
   width: 230px;
   padding-top: 25px;
+  animation-name: draw;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
 }
 
 .legal {
@@ -241,7 +257,14 @@ dialog.success-dialog::backdrop {
   -webkit-text-fill-color: var(--main_white);
 }
 
-// Media Query on 1400px
+@keyframes draw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
 
 @media (max-width: 1400px) {
   .text-form-container {
@@ -258,8 +281,6 @@ dialog.success-dialog::backdrop {
     padding: 40px 0 0 20px;
   }
 }
-
-// Media Query on 930px
 
 @media (max-width: 930px) {
   .sticker-container {
@@ -284,8 +305,6 @@ dialog.success-dialog::backdrop {
     padding: 0 80px 100px;
   }
 }
-
-// Media Query: Tablet on 768px
 
 @media (max-width: 769px) {
   .main-wrapper {
@@ -342,8 +361,6 @@ dialog.success-dialog::backdrop {
   }
 }
 
-// Media Query: on 550px
-
 @media (max-width: 550px) {
   .footer {
     padding: 0 50px 120px;
@@ -366,8 +383,6 @@ dialog.success-dialog::backdrop {
   }
 }
 
-// Media Query: Mobile L on 425px
-
 @media (max-width: 426px) {
   .line-mobile {
     display: flex;
@@ -384,8 +399,6 @@ dialog.success-dialog::backdrop {
     padding: 10px 30px;
   }
 }
-
-// Media Query: Mobile M on 375px
 
 @media (max-width: 376px) {
   .sticker {
@@ -412,8 +425,6 @@ dialog.success-dialog::backdrop {
     width: 300px;
   }
 }
-
-// Media Query: Mobile S on 320px
 
 @media (max-width: 321px) {
   .text-field {

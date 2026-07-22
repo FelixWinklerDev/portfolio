@@ -25,6 +25,28 @@ export class ContactMe {
     public translationService: TranslationService,
   ) {}
 
+  touchedFields: { [key: string]: boolean } = {
+    fname: false,
+    email: false,
+    message: false,
+    policy: false
+  };
+
+  markTouched(field: string): void {
+    this.touchedFields[field] = true;
+  }
+
+  showValidationError(field: string): boolean {
+    if (!this.touchedFields[field]) {
+      return false;
+    }
+    return this.isFieldEmpty(field) || this.isFieldInvalid(field);
+  }
+
+  showPolicyError(): boolean {
+    return this.touchedFields['policy'] && !this.policyCheck;
+  }
+
   closeSuccessDialog() {
     this.successDialog?.nativeElement.close();
   }
@@ -59,10 +81,6 @@ export class ContactMe {
     return false;
   }
 
-  showValidationError(field: string): boolean {
-    return this.isFieldEmpty(field) || this.isFieldInvalid(field);
-  }
-
   isFormValid(): boolean {
     return (
       this.fname.length >= 3 &&
@@ -76,15 +94,25 @@ export class ContactMe {
     if (!this.isFormValid()) {
       return;
     }
-    const formData = new FormData();
-    formData.append('fname', this.fname);
-    formData.append('email', this.email);
-    formData.append('message', this.message);
+
+    const payload = {
+      name: this.fname,
+      email: this.email,
+      message: this.message,
+    };
     fetch('./contact-from-mail.php', {
       method: 'POST',
-      body: formData,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Server returned ' + response.status);
+        }
+        return response.json();
+      })
       .then((data) => {
         console.log('Success:', data);
         this.fname = '';

@@ -130,8 +130,6 @@ input {
   color: var(--main_white);
 }
 
-// Media Query: Tablet ab 768px
-
 @media (max-width: 769px) {
   h1 {
     font-size: 6.4rem;
@@ -149,8 +147,6 @@ input {
     font-size: 2rem;
   }
 }
-
-// Media Query: Mobile M ab 375px
 
 @media (max-width: 382px) {
   h1 {

@@ -78,12 +78,12 @@
   height: 12px;
   border-radius: 50%;
   background-color: var(--highlight_blue);
-  transform: translateX(-2px); 
+  transform: translateX(-2px);
   transition: transform 0.3s ease;
 }
 
 .slider-container.is-de .slider-pill {
-  transform: translateX(30px); 
+  transform: translateX(30px);
 }
 
 .slider-position {
@@ -358,15 +358,27 @@
     margin-right: 1px;
   }
 
+  .polaroid {
+    width: 180px;
+    height: auto;
+    rotate: 8deg;
+  }
+
   .polaroid-wrapper {
-    left: 70%;
-    top: 6%;
-    width: 220px;
+    right: 5%;
+    width: 200px;
   }
 
   .felix {
-    top: 5.9%;
-    right: 1%;
+    top: 6%;
+    right: 15%;
+    width: 153px;
+    height: 153px;
+  }
+
+  .polaroid-txt {
+    left: 10%;
+    top: 80%;
   }
 }
 
@@ -393,30 +405,6 @@
     justify-content: start;
   }
 
-  .polaroid {
-    width: 180px;
-    height: auto;
-    rotate: 8deg;
-  }
-
-  .polaroid-wrapper {
-    left: 25%;
-    top: 40vh;
-    width: 200px;
-  }
-
-  .felix {
-    top: 6%;
-    right: 15%;
-    width: 153px;
-    height: 153px;
-  }
-
-  .polaroid-txt {
-    left: 10%;
-    top: 80%;
-  }
-
   .dark-bg-btn {
     margin-top: 0px;
   }
@@ -428,6 +416,12 @@
   .right {
     margin-right: 80px;
     justify-content: right;
+  }
+
+  .polaroid-wrapper {
+    top: 45vh;
+    right: 0;
+    left: 40%;
   }
 }
 

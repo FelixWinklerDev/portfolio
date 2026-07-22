@@ -76,12 +76,10 @@ export class ContactMe {
     if (!this.isFormValid()) {
       return;
     }
-
     const formData = new FormData();
     formData.append('fname', this.fname);
     formData.append('email', this.email);
     formData.append('message', this.message);
-
     fetch('./contact-from-mail.php', {
       method: 'POST',
       body: formData,

@@ -217,7 +217,8 @@ p {
     width: 350px;
   }
 
-  .projects {
+  .projects,
+  .project-image {
     height: 270px;
     width: 350px;
   }
@@ -229,14 +230,11 @@ p {
 
 @media (max-width: 590px) {
   .wrapper {
-    padding: 40px 0;
+    padding: 40px 20px;
   }
 
   .positioning {
-    justify-content: center;
-    flex-direction: column;
     width: 400px;
-    gap: 12px;
   }
 }
 
@@ -257,13 +255,22 @@ p {
   .sticker {
     height: 90px;
     width: 90px;
-    transform: translate(0, -110px);
+    transform: translate(0, -100px);
+  }
+
+  .wrapper {
+    padding: 40px 20px;
+    width: 380px;
   }
 
   .laptop {
     height: 250px;
     width: 300px;
     margin-left: 20px;
+  }
+
+  .positioning {
+    width: 320px;
   }
 }
 
@@ -273,7 +280,8 @@ p {
     width: 325px;
   }
 
-  .projects {
+  .projects,
+  .project-image {
     height: 250px;
     width: 325px;
   }
@@ -281,12 +289,18 @@ p {
 
 @media (max-width: 321px) {
   .laptop {
+    height: 200px;
+    width: 280px;
+  }
+
+  .projects,
+  .project-image {
     height: 220px;
     width: 300px;
   }
 
-  .projects {
-    height: 220px;
-    width: 300px;
+  .wrapper {
+    width: 320px;
+    padding: 40px 0 40px 10px;
   }
 }

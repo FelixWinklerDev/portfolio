@@ -99,11 +99,30 @@
   }
 }
 
+.about-animation {
+  width: 320px;
+  clip-path: inset(0 100% 0 0);
+  animation-name: draw;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+}
+
 .talk {
   box-shadow: 3px 3px 1px var(--main_black);
 }
 
-// Media Query: on 1000px
+@keyframes draw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
 
 @media (max-width: 1000px) {
   .paper-size {
@@ -147,6 +166,10 @@
       font-size: 1.6rem;
       width: 170px;
     }
+
+    .about-animation {
+      width: 210px;
+    }
   }
 
   .yellow {
@@ -176,6 +199,10 @@
     transform: translateX(-30px);
   }
 
+  .text-position {
+    transform: translateX(-130px);
+  }
+
   .blue,
   .yellow,
   .orange {
@@ -195,9 +222,11 @@
   .icons {
     transform: translateX(120px);
   }
-}
 
-// Media Query: Mobile L on 425px
+  .about-animation {
+    width: 250px;
+  }
+}
 
 @media (max-width: 426px) {
   .about-gap {
@@ -214,12 +243,18 @@
   .orange {
     width: 320px;
   }
-}
 
-// Media Query: Mobile S on 320px
+  .about-animation {
+    width: 160px;
+  }
+}
 
 @media (max-width: 321px) {
   .about-gap {
     width: 280px;
+  }
+
+  .about-animation {
+    width: 150px;
   }
 }

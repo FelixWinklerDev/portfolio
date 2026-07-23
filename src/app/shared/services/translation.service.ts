@@ -70,7 +70,7 @@ export class TranslationService {
           description:
             'a task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
           implementationDetails:
-            'My focus in this Project was in state management and UI interactivity. This is a group Project and developed a functional task management system using Angular and TypeScript to handle dynamic "To-Do","In Progress" and "Done" states. Also we implemented drag-and-drop functionality and used LocalStorage to ensure data persistence, demonstrating a structured approach to user data and workflow organization.',
+            'My focus in this Project was in state management and UI interactivity. This is a group Project and developed a functional task management system using Angular and TypeScript to handle dynamic "To-Do","In Progress" and "Done" states. Also we implemented drag-and-drop functionality and demonstrating a structured approach to user data and workflow organization.',
           duration: '5 weeks',
           technologies: 'HTML, CSS, Angular, TypeScript',
         },
@@ -201,7 +201,7 @@ export class TranslationService {
           description:
             'ein Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Nutzer und Kategorien zu.',
           implementationDetails:
-            'Mein Schwerpunkt bei diesem Projekt lag auf dem State-Management und der Interaktivität der Benutzeroberfläche. Im Rahmen dieses Gruppenprojekts entwickelten wir ein funktionales Aufgabenverwaltungssystem mit Angular und TypeScript, das die dynamischen Status „To-Do“, „In Progress“ und „Done“ abbildet. Zudem implementierten wir eine Drag-and-Drop-Funktionalität und nutzten LocalStorage zur Datenspeicherung, womit wir einen strukturierten Ansatz für den Umgang mit Benutzerdaten und die Organisation von Arbeitsabläufen demonstrierten.',
+            'Mein Schwerpunkt bei diesem Projekt lag auf dem State-Management und der Interaktivität der Benutzeroberfläche. Im Rahmen dieses Gruppenprojekts entwickelten wir ein funktionales Aufgabenverwaltungssystem mit Angular und TypeScript, das die dynamischen Status „To-Do“, „In Progress“ und „Done“ abbildet. Zudem implementierten wir eine Drag-and-Drop-Funktionalität womit wir einen strukturierten Ansatz für den Umgang mit Benutzerdaten und die Organisation von Arbeitsabläufen demonstrierten.',
           duration: '5 Wochen',
           technologies: 'HTML, CSS, Angular, TypeScript',
         },

@@ -49,10 +49,10 @@
 }
 
 .underline {
-  height: 65px;
-  width: 230px;
-  transform: translateY(-50px) scaleX(2);
-  clip-path: inset(0 100% 0 0);
+  height: 90px;
+  width: 290px;
+  transform: translate(20px, -100px);
+  clip-path: inset(0 100% 50% 0);
   animation-name: draw;
   animation-duration: 3s;
   animation-timing-function: ease;
@@ -134,7 +134,7 @@
 
 @keyframes draw {
   from {
-    clip-path: inset(0 100% 0 0);
+    clip-path: inset(100% 0 50% 0);
   }
   to {
     clip-path: inset(0 0 0 0);

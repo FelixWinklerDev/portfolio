@@ -87,7 +87,13 @@
       </div>
       <div class="right d-flex gap">
         <a class="transparent-btn" href="{{ project?.github }}" target="_blank">GitHub</a>
-        <a class="transparent-btn" href="{{ project?.livetest }}" target="_blank">Live Test</a>
+        <a
+          class="transparent-btn"
+          [href]="project?.livetest"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Live Test</a
+        >
       </div>
       <div class="d-flex center-btn right">
         <button class="next-btn" id="nextButton" (click)="next.emit()">Next Project</button>

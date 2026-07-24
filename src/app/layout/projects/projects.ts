@@ -29,8 +29,8 @@ export class Projects {
       technologies: 'HTML CSS Angular TypeScript',
       img: 'assets/img/join.jpg',
       sticker: 'assets/img/project-sticker.png',
-      github: 'https://github.com/Rudibert-Code/join',
-      livetest: 'join.felixwinklerdev.de',
+      github: 'https://github.com/FelixWinklerDev/join',
+      livetest: 'https://join.felixwinklerdev.de',
     },
     {
       name: 'El Pollo Loco',
@@ -43,7 +43,7 @@ export class Projects {
       img: 'assets/img/el-pollo.png',
       sticker: 'assets/img/sticker-project-details.png',
       github: 'https://github.com/FelixWinklerDev/el_pollo_loco',
-      livetest: 'elpolloloco.felixwinklerdev.de',
+      livetest: 'https://elpolloloco.felixwinklerdev.de',
     },
     {
       name: 'Pokedex',
@@ -56,7 +56,7 @@ export class Projects {
       img: 'assets/img/pokedex.png',
       sticker: 'assets/img/sticker-project-details.png',
       github: 'https://github.com/FelixWinklerDev/pokedex',
-      livetest: 'pokedex.felixwinklerdev.de',
+      livetest: 'https://pokedex.felixwinklerdev.de/',
     },
   ];
 

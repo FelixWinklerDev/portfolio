@@ -45,6 +45,7 @@
           <span class="requirement" [class.visible]="showValidationError('fname')">
             {{ translationService.translate('contact.form.nameError') }} </span
           ><br />
+          <div class="seperator"></div>
           <label for="email">{{ translationService.translate('contact.form.emailLabel') }}</label
           ><br />
           <input
@@ -61,6 +62,7 @@
           <span class="requirement" [class.visible]="showValidationError('email')">
             {{ translationService.translate('contact.form.emailError') }} </span
           ><br />
+          <div class="seperator"></div>
           <label for="message">{{
             translationService.translate('contact.form.messageLabel')
           }}</label
@@ -78,6 +80,7 @@
           <span class="requirement" [class.visible]="showValidationError('message')">
             {{ translationService.translate('contact.form.messageError') }}
           </span>
+          <div class="seperator"></div>
           <br />
           <div class="checkbox">
             <input

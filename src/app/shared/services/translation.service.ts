@@ -193,7 +193,7 @@ export class TranslationService {
         implementationDetailsTitle: 'Implementierungs Details',
         durationtitle: 'Dauer:',
         technologiesTitle: 'Technologien:',
-        goBack: 'Zurück zur Hauptseite',
+        goBack: 'zur Hauptseite',
         nextProject: 'Nächstes Projekt',
         livetest: 'Echtzeittest',
         join: {

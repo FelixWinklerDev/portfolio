@@ -45,10 +45,12 @@
   </dialog>
   <div class="d-flex center-btn">
     <img class="arrow" src="assets/icons/back-project-details-arrow.png" alt="arrow icon left" />
-    <button class="back-btn" id="backButton" (click)="close.emit()">Go Back</button>
+    <button class="back-btn" id="backButton" (click)="close.emit()">
+      {{ translationService.translate('projectDetails.goBack') }}
+    </button>
   </div>
   <section class="details-wrapper d-flex">
-    <div class="content">
+    <div class="content-txt">
       <div class="project-name-wrapper">
         <h2 class="black-txt">
           {{ translationService.translate('projectDetails.' + projectKey + '.title') }}
@@ -80,7 +82,7 @@
         {{ translationService.translate('projectDetails.' + projectKey + '.technologies') }}
       </p>
     </div>
-    <div class="content">
+    <div class="content-project">
       <div class="d-flex">
         <img class="project-preview" src="{{ project?.img }}" alt="preview image of the project" />
         <img class="sticker" src="{{ project?.sticker }}" alt="sticker image" />
@@ -96,12 +98,36 @@
         >
       </div>
       <div class="d-flex center-btn right">
-        <button class="next-btn" id="nextButton" (click)="next.emit()">Next Project</button>
+        <button class="next-btn" id="nextButton" (click)="next.emit()">
+          {{ translationService.translate('projectDetails.nextProject') }}
+        </button>
         <img
           class="arrow-right"
           src="assets/icons/next-project-details-arrow.png"
           alt="arrow icon right"
         />
+      </div>
+      <div class="d-flex center-btn-mobile">
+        <div class="d-flex center">
+          <img
+            class="arrow"
+            src="assets/icons/back-project-details-arrow.png"
+            alt="arrow icon left"
+          />
+          <button class="back-btn" id="backButton" (click)="close.emit()">
+            {{ translationService.translate('projectDetails.goBack') }}
+          </button>
+        </div>
+        <div class="d-flex center">
+          <button class="next-btn" id="nextButton" (click)="next.emit()">
+            {{ translationService.translate('projectDetails.nextProject') }}
+          </button>
+          <img
+            class="arrow-right"
+            src="assets/icons/next-project-details-arrow.png"
+            alt="arrow icon right"
+          />
+        </div>
       </div>
     </div>
   </section>

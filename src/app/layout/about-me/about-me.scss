@@ -124,7 +124,13 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1150px) {
+  .about-wrapper {
+    gap: 150px;
+}
+}
+
+@media (max-width: 1132px) {
   .paper-size {
     height: 120px;
     width: 360px;

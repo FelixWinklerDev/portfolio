@@ -21,6 +21,7 @@
 .right {
   justify-content: right;
   gap: 20px;
+  width: 100%;
 }
 
 .center {
@@ -50,7 +51,7 @@
   flex-wrap: wrap;
 }
 
-.seperator{
+.seperator {
   height: 1px;
   width: 100%;
   background-color: var(--highlight_yellow);
@@ -304,7 +305,7 @@ dialog.success-dialog::backdrop {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    padding-left: 70px;
+    margin-left: 60px;
   }
 
   .line {
@@ -351,7 +352,7 @@ dialog.success-dialog::backdrop {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 120px 0 0 0;
+    padding: 120px 10px 0;
   }
 
   .sub-text-container {
@@ -427,6 +428,7 @@ dialog.success-dialog::backdrop {
   .send-button:enabled,
   .send-button:disabled {
     padding: 10px 30px;
+    text-align: start;
   }
 }
 
@@ -456,15 +458,11 @@ dialog.success-dialog::backdrop {
 
   .policy-txt,
   .form {
-    width: 300px;
+    width: 80%;
   }
 
   .checkbox {
-    width: 300px;
-  }
-
-  .text-form-container {
-    padding: 0 15px;
+    width: 80%;
   }
 }
 

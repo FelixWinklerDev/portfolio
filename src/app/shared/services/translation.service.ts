@@ -171,7 +171,7 @@ export class TranslationService {
         title: 'Projekte',
         description:
           'Jedes Projekt wird mit Blick auf Responsivität, Benutzerfreundlichkeit und Liebe zum Detail entwickelt. Schau dir meine Arbeit an.',
-        details: 'Projekt-Details',
+        details: 'Projekt Details',
         join: {
           title: 'Join',
           description:

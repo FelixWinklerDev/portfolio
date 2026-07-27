@@ -6,7 +6,8 @@ header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json; charset=utf-8");
 
-$siteEmail = "felixwinklerdev@gmail.com";
+$recipient = "felixwinklerdev@gmail.com"; 
+$siteEmail = "kontakt@felixwinklerdev.de";
 
 switch ($_SERVER['REQUEST_METHOD']) {
 
@@ -44,7 +45,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $safeMessage = nl2br(htmlspecialchars($userMessage, ENT_QUOTES, 'UTF-8'));
 
         // Empfängeradresse (nutzt die oben definierte Mail)
-        $recipient = $siteEmail; 
         $subject = 'Website Contact Form';
 
         $mailBody = "

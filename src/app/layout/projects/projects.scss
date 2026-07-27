@@ -9,7 +9,6 @@ p {
 }
 
 .wrapper {
-  width: 100%;
   padding-top: 120px;
   justify-content: center;
   align-items: center;
@@ -40,7 +39,7 @@ p {
 .positioning {
   justify-content: center;
   flex-direction: column;
-  width: 560px;
+  max-width: 560px; // Maximale Breite begrenzen, aber flexibles Schrumpfen erlauben
   gap: 12px;
 }
 
@@ -67,8 +66,10 @@ p {
 
 .featured-project {
   position: relative;
-  height: 320px;
-  width: 430px;
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  aspect-ratio: 430 / 320;
   border-radius: 15px;
   cursor: pointer;
   &::after {
@@ -86,9 +87,8 @@ p {
   }
   #projectBtn {
     position: absolute;
-    width: 150px;
     bottom: 20px;
-    left: 80%;
+    left: 70%;
     transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
@@ -230,7 +230,8 @@ p {
 
 @media (max-width: 590px) {
   .wrapper {
-    padding: 40px 0;
+    padding: 40px 20px;
+    justify-content: start;
   }
 
   .positioning {
@@ -246,8 +247,6 @@ p {
 
 @media (max-width: 440px) {
   .featured-project {
-    height: 250px;
-    width: 320px;
     border-radius: 15px;
     cursor: pointer;
   }
@@ -275,8 +274,8 @@ p {
 
 @media (max-width: 376px) {
   .laptop {
-    height: 250px;
-    width: 325px;
+    height: 200px;
+    width: 280px;
   }
 
   .projects,
@@ -287,11 +286,6 @@ p {
 }
 
 @media (max-width: 321px) {
-  .laptop {
-    height: 200px;
-    width: 280px;
-  }
-
   .projects,
   .project-image {
     height: 220px;
@@ -299,7 +293,6 @@ p {
   }
 
   .wrapper {
-    width: 320px;
-    padding: 40px 0 40px 10px;
+    padding: 40px 0;
   }
 }

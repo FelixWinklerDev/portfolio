@@ -120,7 +120,7 @@
   padding: 0 120px 100px;
 }
 
-.logo-footer {
+.footer-logo {
   width: 80px;
   height: 80px;
   transform: translate(-20px, 20px);
@@ -183,9 +183,11 @@
 }
 
 dialog.success-dialog {
-  position: absolute;
+  position: sticky;
   top: 50%;
   right: 50%;
+  bottom: 50%;
+  left: 50%;
   border: none;
   border-radius: 10px;
   padding: 0;
@@ -320,6 +322,8 @@ dialog.success-dialog::backdrop {
     margin-left: 60px;
   }
 
+  
+
   .line {
     display: none;
   }
@@ -421,12 +425,19 @@ dialog.success-dialog::backdrop {
     padding-top: 20px;
   }
 
-  .logo-footer {
-    transform: translate(20px, 30px);
+  .footer-logo {
+    transform: translate(-200px, 80px);
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    height: 80px;
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 526px) {
   .line-mobile {
     display: flex;
     width: 150px;
@@ -441,6 +452,12 @@ dialog.success-dialog::backdrop {
   .send-button:disabled {
     padding: 10px 30px;
     text-align: start;
+  }
+}
+
+@media (max-width: 490px) {
+  .text-form-container {
+    margin: 20px;
   }
 }
 
@@ -475,6 +492,12 @@ dialog.success-dialog::backdrop {
 
   .checkbox {
     width: 80%;
+  }
+
+  .send-button:enabled,
+  .send-button:disabled {
+    padding: 10px;
+    text-align: start;
   }
 }
 

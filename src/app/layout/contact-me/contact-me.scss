@@ -183,13 +183,18 @@
 }
 
 dialog.success-dialog {
+  position: absolute;
+  top: 50%;
+  right: 50%;
   border: none;
   border-radius: 10px;
   padding: 0;
+  background: var(--transparence);
 }
 
 dialog.success-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+  filter: blur(1px);
 }
 
 .success-content {
@@ -221,11 +226,18 @@ dialog.success-dialog::backdrop {
 
 .close-btn {
   padding: 10px 22px;
-  border-radius: 999px;
+  border-radius: 100px;
   border: 1px solid var(--main_white);
   background: transparent;
   color: var(--main_white);
   cursor: pointer;
+  box-shadow: 3px 3px 1px var(--main_white);
+  &:hover {
+    background-color: var(--highlight_orange);
+    box-shadow: none;
+    transform: scale(0.9);
+    transition: all ease-in 300ms;
+  }
 }
 
 .send-button:enabled {

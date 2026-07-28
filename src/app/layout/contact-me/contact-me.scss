@@ -65,7 +65,7 @@
 
 .header-container,
 .sub-text-container {
-  width: 560px;
+  max-width: 560px;
 }
 
 .sticker-container {
@@ -154,13 +154,13 @@
 .text-field {
   background-color: var(--transparence);
   height: 25px;
-  width: 500px;
+  max-width: 500px;
   border-width: 0;
   margin-bottom: 5px;
 }
 
 .checkbox {
-  width: 500px;
+  max-width: 500px;
 }
 
 .requirement {
@@ -183,11 +183,6 @@
 }
 
 dialog.success-dialog {
-  position: sticky;
-  top: 50%;
-  right: 50%;
-  bottom: 50%;
-  left: 50%;
   border: none;
   border-radius: 10px;
   padding: 0;
@@ -305,7 +300,7 @@ dialog.success-dialog::backdrop {
   }
 
   .footer {
-    padding: 0 120px 100px;
+    padding: 0 60px 120px;
   }
 
   .gap {
@@ -319,10 +314,7 @@ dialog.success-dialog::backdrop {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    margin-left: 60px;
   }
-
-  
 
   .line {
     display: none;
@@ -356,10 +348,6 @@ dialog.success-dialog::backdrop {
   .logo {
     transform: translateY(-130px) translateX(-4px);
   }
-
-  .footer {
-    padding: 0 80px 100px;
-  }
 }
 
 @media (max-width: 769px) {
@@ -378,10 +366,6 @@ dialog.success-dialog::backdrop {
 
   .form {
     width: 80%;
-  }
-
-  .header-container {
-    padding-left: 40px;
   }
 
   .space {
@@ -410,7 +394,6 @@ dialog.success-dialog::backdrop {
 
 @media (max-width: 550px) {
   .footer {
-    padding: 0 50px 120px;
     flex-direction: column;
   }
 
@@ -455,9 +438,9 @@ dialog.success-dialog::backdrop {
   }
 }
 
-@media (max-width: 490px) {
-  .text-form-container {
-    margin: 20px;
+@media (max-width: 422px) {
+  .checkbox{
+    width: 100%;
   }
 }
 
@@ -490,14 +473,14 @@ dialog.success-dialog::backdrop {
     width: 80%;
   }
 
-  .checkbox {
-    width: 80%;
-  }
-
   .send-button:enabled,
   .send-button:disabled {
     padding: 10px;
     text-align: start;
+  }
+
+  .sticker-container {
+    padding: 0 0 0 20px;
   }
 }
 

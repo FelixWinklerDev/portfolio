@@ -39,7 +39,7 @@ p {
 .positioning {
   justify-content: center;
   flex-direction: column;
-  max-width: 560px; // Maximale Breite begrenzen, aber flexibles Schrumpfen erlauben
+  max-width: 560px;
   gap: 12px;
 }
 
@@ -186,6 +186,24 @@ p {
   }
 }
 
+.light-bg-btn {
+  display: none;
+  border: solid 1px var(--main_black);
+  border-radius: 100px;
+  overflow: hidden;
+  padding: 10px 16px;
+  background-color: var(--transparence);
+  color: var(--main_black);
+  z-index: 1000;
+  box-shadow: 3px 3px 1px var(--main_black);
+  width: 150px;
+  &:hover {
+    background-color: var(--highlight_orange);
+    box-shadow: none;
+    transition: all ease-in 300ms;
+  }
+}
+
 @keyframes bounce {
   0%,
   20%,
@@ -223,8 +241,12 @@ p {
     width: 350px;
   }
 
-  .sub-txt {
-    width: 450px;
+  #projectBtn {
+    display: none;
+  }
+
+  .light-bg-btn {
+    display: flex;
   }
 }
 
@@ -232,16 +254,6 @@ p {
   .wrapper {
     padding: 40px 20px;
     justify-content: start;
-  }
-
-  .positioning {
-    width: 400px;
-  }
-}
-
-@media (max-width: 520px) {
-  .sub-txt {
-    width: 300px;
   }
 }
 
@@ -257,18 +269,10 @@ p {
     transform: translate(0, -100px);
   }
 
-  .wrapper {
-    width: 380px;
-  }
-
   .laptop {
     height: 250px;
     width: 300px;
     margin-left: 20px;
-  }
-
-  .positioning {
-    width: 320px;
   }
 }
 

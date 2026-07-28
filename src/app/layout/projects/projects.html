@@ -17,6 +17,9 @@
     </div>
     <h3 class="black-txt">{{ translationService.translate('projects.join.title') }}</h3>
     <p class="black-txt sub-txt">{{ translationService.translate('projects.join.description') }}</p>
+    <button class="light-bg-btn" (click)="openProject(projects[0])">
+      {{ translationService.translate('projects.details') }}
+    </button>
   </div>
   <div class="positioning d-flex">
     <div class="projects" (click)="openProject(projects[1])">
@@ -29,6 +32,9 @@
     <p class="black-txt sub-txt">
       {{ translationService.translate('projects.elPollo.description') }}
     </p>
+    <button class="light-bg-btn" (click)="openProject(projects[1])">
+      {{ translationService.translate('projects.details') }}
+    </button>
   </div>
   <div class="positioning d-flex">
     <div class="projects" (click)="openProject(projects[2])">
@@ -41,6 +47,9 @@
     <p class="black-txt sub-txt">
       {{ translationService.translate('projects.pokedex.description') }}
     </p>
+    <button class="light-bg-btn" (click)="openProject(projects[2])">
+      {{ translationService.translate('projects.details') }}
+    </button>
   </div>
 </section>
 <dialog #projectDialog>

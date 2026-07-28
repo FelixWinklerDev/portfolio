@@ -103,6 +103,12 @@
   margin-right: 20px;
 }
 
+.exhibition {
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+
 .navbar {
   align-items: center;
   justify-content: space-between;
@@ -264,17 +270,17 @@
 }
 
 .content-txt {
-  width: 450px;
+  max-width: 450px;
 }
 
 .content-project {
-  width: 450px;
+  max-width: 450px;
 }
 
 .sticker {
   height: 120px;
   width: 120px;
-  transform: translate(-54px, 54px);
+  transform: translate(-60px, 0);
 }
 
 .project-preview {
@@ -310,11 +316,6 @@
     height: 220px;
     width: 280px;
     border-radius: 15px;
-    transform: translate(50px);
-  }
-
-  .sticker {
-    transform: translate(-4px, 54px);
   }
 
   .content-txt {
@@ -334,10 +335,39 @@
   }
 }
 
+@media (min-width: 1441px) {
+  .project-detail-wrapper {
+    min-width: 1540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  .projects {
+    color: var(--main_black);
+  }
+
+  .details-wrapper[_ngcontent-ng-c213232331] {
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 40px;
+    gap: 280px;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 1440px;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
 @media (max-width: 1000px) {
   .project-detail-wrapper {
-    min-height: 100vh;
-    max-height: 150vh;
+    min-height: 130vh;
     height: 100%;
     background-image: url(assets/img/project-detail-mobile-paper.png);
     background-size: cover;
@@ -397,11 +427,6 @@
 }
 
 @media (max-width: 490px) {
-  .content-txt,
-  .content-project {
-    width: 300px;
-  }
-
   .placeholder-container {
     min-height: 90px;
     max-height: 90px;

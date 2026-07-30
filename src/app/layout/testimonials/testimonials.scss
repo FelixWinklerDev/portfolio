@@ -152,6 +152,12 @@
   }
 }
 
+@media (min-width: 1441px) {
+  .header-testimonial {
+    align-items: center;
+  }
+}
+
 @media (max-width: 1400px) {
   .mobile {
     flex-direction: column;
@@ -196,7 +202,7 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 455px) {
   .paper {
     height: 230px;
     width: 250px;

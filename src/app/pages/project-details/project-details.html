@@ -22,7 +22,7 @@
       >
         EN
       </button>
-      <div class="slider-container" [class.is-de]="isActiveLanguage('de')">
+      <div class="slider-container" [class.is-de]="isActiveLanguage('de')" (click)="toggleLanguage()">
         <span class="slider-pill"></span>
       </div>
       <button
@@ -43,9 +43,9 @@
   <dialog #mobileNav>
     <app-mobile-nav (close)="closeMobileMenu()"></app-mobile-nav>
   </dialog>
-  <div class="d-flex center-btn">
+  <div class="d-flex upper-center-btn" id="backButton" (click)="close.emit()">
     <img class="arrow" src="assets/icons/back-project-details-arrow.png" alt="arrow icon left" />
-    <button class="back-btn" id="backButton" (click)="close.emit()">
+    <button class="back-btn">
       {{ translationService.translate('projectDetails.goBack') }}
     </button>
   </div>
@@ -97,8 +97,8 @@
           >Live Test</a
         >
       </div>
-      <div class="d-flex center-btn right">
-        <button class="next-btn" id="nextButton" (click)="next.emit()">
+      <div class="d-flex lower-center-btn right"  id="nextButton" (click)="next.emit()">
+        <button class="next-btn">
           {{ translationService.translate('projectDetails.nextProject') }}
         </button>
         <img
@@ -108,18 +108,18 @@
         />
       </div>
       <div class="d-flex center-btn-mobile">
-        <div class="d-flex center">
+        <div class="d-flex center" id="backButton" (click)="close.emit()">
           <img
             class="arrow"
             src="assets/icons/back-project-details-arrow.png"
             alt="arrow icon left"
           />
-          <button class="back-btn" id="backButton" (click)="close.emit()">
+          <button class="back-btn">
             {{ translationService.translate('projectDetails.goBack') }}
           </button>
         </div>
-        <div class="d-flex center">
-          <button class="next-btn" id="nextButton" (click)="next.emit()">
+        <div class="d-flex center" id="nextButton" (click)="next.emit()">
+          <button class="next-btn">
             {{ translationService.translate('projectDetails.nextProject') }}
           </button>
           <img

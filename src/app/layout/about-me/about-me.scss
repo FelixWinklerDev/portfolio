@@ -124,10 +124,28 @@
   }
 }
 
+@media (min-width: 1441px) {
+  .about-wrapper {
+    padding: 144px 100px;
+    gap: 100px;
+  }
+
+  .text-position {
+    transform: translateX(0px);
+  }
+}
+
+@media (min-width: 2100px) {
+  .about-wrapper {
+    padding: 144px 120px;
+    gap: 280px;
+  }
+}
+
 @media (max-width: 1150px) {
   .about-wrapper {
     gap: 150px;
-}
+  }
 }
 
 @media (max-width: 1132px) {

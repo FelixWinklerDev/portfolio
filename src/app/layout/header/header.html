@@ -22,7 +22,11 @@
       >
         EN
       </button>
-      <div class="slider-container" [class.is-de]="isActiveLanguage('de')">
+      <div
+        class="slider-container"
+        [class.is-de]="isActiveLanguage('de')"
+        (click)="toggleLanguage()"
+      >
         <span class="slider-pill"></span>
       </div>
       <button
@@ -54,16 +58,23 @@
             *ngFor="let letter of headerTitle1"
             class="interactive-letter"
             [class.hovered]="letter.hovered"
+            [attr.data-hover]="toggleCase(letter.char)"
             (mouseenter)="setLetterHover(letter, true)"
             (mouseleave)="setLetterHover(letter, false)"
-            >{{ getLetterDisplay(letter) }}</span
           >
+            {{ letter.char }}
+          </span>
         </h1>
       </div>
-      <div class="polaroid-wrapper">
+      <div
+        class="polaroid-wrapper"
+        [class.is-hovered]="isPolaroidHovered"
+        (mouseenter)="setPolaroidHover(true)"
+        (mouseleave)="setPolaroidHover(false)"
+      >
         <img class="polaroid" src="assets/img/polaroid_border.png" alt="polaroid" />
         <img class="felix" src="assets/img/felix.jpg" alt="image of contender" />
-        <p class="polaroid-txt">Felix :)</p>
+        <p class="polaroid-txt">{{ isPolaroidHovered ? 'Felix :D' : 'Felix :)' }}</p>
       </div>
     </div>
     <div class="down-line d-flex">
@@ -72,10 +83,12 @@
           *ngFor="let letter of headerTitle2"
           class="interactive-letter"
           [class.hovered]="letter.hovered"
+          [attr.data-hover]="toggleCase(letter.char)"
           (mouseenter)="setLetterHover(letter, true)"
           (mouseleave)="setLetterHover(letter, false)"
-          >{{ getLetterDisplay(letter) }}</span
         >
+          {{ letter.char }}
+        </span>
       </h1>
     </div>
     <div class="right d-flex">

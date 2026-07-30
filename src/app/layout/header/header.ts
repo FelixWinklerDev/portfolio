@@ -21,9 +21,12 @@ export class Header {
   headerTitle1: InteractiveLetter[] = 'Frontend'
     .split('')
     .map((char) => ({ char, hovered: false }));
+
   headerTitle2: InteractiveLetter[] = 'DEVELOPER'
     .split('')
     .map((char) => ({ char, hovered: false }));
+
+  isPolaroidHovered = false;
 
   constructor(
     private cd: ChangeDetectorRef,
@@ -48,7 +51,7 @@ export class Header {
     return letter.hovered ? this.toggleCase(letter.char) : letter.char;
   }
 
-  private toggleCase(value: string) {
+  toggleCase(value: string): string {
     return value === value.toLowerCase() ? value.toUpperCase() : value.toLowerCase();
   }
 
@@ -58,5 +61,9 @@ export class Header {
 
   isActiveLanguage(language: 'en' | 'de') {
     return this.translationService.getLanguage() === language;
+  }
+
+  setPolaroidHover(hovered: boolean) {
+    this.isPolaroidHovered = hovered;
   }
 }

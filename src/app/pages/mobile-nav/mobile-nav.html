@@ -27,7 +27,7 @@
       >
         EN
       </button>
-      <div class="slider-container" [class.is-de]="isActiveLanguage('de')">
+      <div class="slider-container" [class.is-de]="isActiveLanguage('de')" (click)="toggleLanguage()">
         <span class="slider-pill"></span>
       </div>
       <button

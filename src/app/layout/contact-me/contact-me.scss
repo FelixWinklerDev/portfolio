@@ -287,6 +287,28 @@ dialog.success-dialog::backdrop {
   }
 }
 
+@media (min-width: 1441px) {
+  .wrapper {
+    min-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+  }
+
+  .footer {
+    width: 1440px;
+    padding: 0 0 120px;
+  }
+}
+
 @media (max-width: 1400px) {
   .text-field {
     background-color: var(--transparence);
@@ -296,7 +318,7 @@ dialog.success-dialog::backdrop {
   }
 
   .checkbox {
-    width: 400px;
+    width: 100%;
   }
 
   .footer {
@@ -337,7 +359,7 @@ dialog.success-dialog::backdrop {
   }
 
   .space {
-    height: 150px;
+    max-height: 230px;
     padding-bottom: 64px;
   }
 
@@ -364,11 +386,16 @@ dialog.success-dialog::backdrop {
     padding: 0 0 40px;
   }
 
+  .text-form-container {
+    align-items: center;
+  }
+
   .form {
     width: 80%;
   }
 
   .space {
+    height: 130px;
     justify-content: center;
   }
 
@@ -405,6 +432,7 @@ dialog.success-dialog::backdrop {
   }
 
   .space-around {
+    justify-content: space-between;
     padding-top: 20px;
   }
 
@@ -439,7 +467,7 @@ dialog.success-dialog::backdrop {
 }
 
 @media (max-width: 422px) {
-  .checkbox{
+  .checkbox {
     width: 100%;
   }
 }
@@ -465,7 +493,7 @@ dialog.success-dialog::backdrop {
   }
 
   .text-field {
-    width: 300px;
+    width: 100%;
   }
 
   .policy-txt,

@@ -79,12 +79,12 @@
   height: 12px;
   border-radius: 50%;
   background-color: var(--highlight_blue);
-  transform: translateX(-2px); 
+  transform: translateX(-2px);
   transition: transform 0.3s ease;
 }
 
 .slider-container.is-de .slider-pill {
-  transform: translateX(30px); 
+  transform: translateX(30px);
 }
 
 .slider-position {
@@ -115,12 +115,12 @@
 .footer {
   justify-content: space-evenly;
   align-items: end;
-  padding: 0 20px 20px 20px;
+  padding: 0 60px 50px;
 }
 
 .legal {
   width: 200px;
-  padding-left: 20px;
+  padding-left: 60px;
 }
 
 .about-me,
@@ -263,6 +263,12 @@
   }
 }
 
+@media (min-width: 1441px) {
+  .center {
+    max-width: 1440px;
+  }
+}
+
 @media (max-width: 769px) {
   .nav-link,
   .slider-position,
@@ -280,6 +286,12 @@
 
   .footer {
     flex-direction: column;
+    padding: 0 20px 20px;
+  }
+
+  .legal {
+    width: 200px;
+    padding-left: 20px;
   }
 }
 

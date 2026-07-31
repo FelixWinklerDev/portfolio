@@ -183,12 +183,15 @@
 }
 
 dialog.success-dialog {
+  position: fixed;
+  inset: 0;
   margin: auto;
   border: none;
-  border-radius: 10px;
   padding: 0;
-  background: var(--requirement);
+  background: var(--transparence);
   outline: none;
+  max-width: fit-content;
+  max-height: fit-content;
 }
 
 dialog.success-dialog::backdrop {
@@ -203,7 +206,8 @@ dialog.success-dialog::backdrop {
   width: 360px;
   max-width: calc(100vw - 48px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-  border-radius: 8px;
+  border: solid 1px var(--main_white);
+  border-radius: 12px;
   text-align: center;
   font-family: 'BricolageGrotesque-Regular';
 }

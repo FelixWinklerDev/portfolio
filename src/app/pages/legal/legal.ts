@@ -33,7 +33,7 @@ export class Legal {
   }
 
   goHome(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['']);
   }
 
   toggleLanguage() {

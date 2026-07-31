@@ -131,12 +131,13 @@
 .about-me,
 .skills {
   position: relative;
-  mix-blend-mode: difference;
+  color: var(--main_black);
 }
 
 .projects,
 .contact-me {
   position: relative;
+  color: var(--main_white);
   mix-blend-mode: difference;
 }
 
@@ -215,6 +216,7 @@
   color: var(--main_black);
   background-color: var(--transparence);
   height: 24px;
+  mix-blend-mode: difference;
   &:hover {
     color: var(--highlight_orange);
   }
@@ -224,6 +226,7 @@
   color: var(--main_white);
   background-color: var(--transparence);
   height: 24px;
+  mix-blend-mode: difference;
   &:hover {
     color: var(--highlight_orange);
   }
@@ -298,6 +301,7 @@
   padding: 12px 24px;
   background-color: var(--transparence);
   color: var(--main_white);
+  mix-blend-mode: difference;
   z-index: 1;
   box-shadow: 3px 3px 1px var(--main_white);
   &:hover {
@@ -378,12 +382,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  .transparent-btn,
-  .next-btn,
-  .back-btn {
-    mix-blend-mode: difference;
   }
 }
 

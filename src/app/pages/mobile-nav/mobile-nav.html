@@ -6,16 +6,16 @@
     </button>
   </div>
   <nav class="mobile-nav d-flex">
-    <a class="about-me nav-link" href="#about">{{
+    <a class="about-me nav-link" href="#about" (click)="close.emit()">{{
       translationService.translate('header.nav.aboutMe')
     }}</a>
-    <a class="skills nav-link" href="#skillset">{{
+    <a class="skills nav-link" href="#skillset" (click)="close.emit()">{{
       translationService.translate('header.nav.skills')
     }}</a>
-    <a class="projects nav-link" href="#projects">{{
+    <a class="projects nav-link" href="#projects" (click)="close.emit()">{{
       translationService.translate('header.nav.projects')
     }}</a>
-    <a class="contact-me nav-link" href="#contact">{{
+    <a class="contact-me nav-link" href="#contact" (click)="close.emit()">{{
       translationService.translate('header.nav.contact')
     }}</a>
     <div class="d-flex slider-position">
@@ -27,7 +27,11 @@
       >
         EN
       </button>
-      <div class="slider-container" [class.is-de]="isActiveLanguage('de')" (click)="toggleLanguage()">
+      <div
+        class="slider-container"
+        [class.is-de]="isActiveLanguage('de')"
+        (click)="toggleLanguage()"
+      >
         <span class="slider-pill"></span>
       </div>
       <button

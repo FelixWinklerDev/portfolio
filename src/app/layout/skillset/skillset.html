@@ -59,11 +59,32 @@
         <p>Material<br />Design</p>
       </div>
     </div>
-    <aside class="post-it-wrapper d-flex">
-      <img class="post-it" src="assets/img/post-it.png" alt="post it icon" />
-      <div class="on-post-it center d-flex">
-        <img class="arrow" src="assets/icons/postit_peel.png" alt="arrow icon" />
-        <p class="peel-txt">{{ translationService.translate('skillset.peel') }}</p>
+    <aside class="post-it-container" [class.is-peeled]="isPeeled" (click)="togglePeel()">
+      <div class="surprise d-flex centered-wrap">
+        <h4>{{ translationService.translate('skillset.surprise') }}</h4>
+        <div class="d-flex center">
+          <img
+            class="surprise-icon"
+            src="assets/icons/icon-react.png"
+            alt="material design icon"
+          />
+          <p>React.JS</p>
+        </div>
+        <div class="d-flex center">
+          <img
+            class="surprise-icon"
+            src="assets/icons/icon-vue.png"
+            alt="material design icon"
+          />
+          <p>Vue.JS</p>
+        </div>
+      </div>
+      <div class="post-it-wrapper d-flex center">
+        <img class="post-it" src="assets/img/post-it.png" alt="post it icon" />
+        <div class="on-post-it center d-flex">
+          <img class="arrow" src="assets/icons/postit_peel.png" alt="arrow icon" />
+          <p class="peel-txt">{{ translationService.translate('skillset.peel') }}</p>
+        </div>
       </div>
     </aside>
   </div>

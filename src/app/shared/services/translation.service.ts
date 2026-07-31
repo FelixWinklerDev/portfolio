@@ -34,6 +34,7 @@ export class TranslationService {
         description:
           "I'm using modern frontend technologies and I'm always open to learn new technologies and improving my skills.",
         peel: 'Pull to Peel',
+        surprise: 'Want to learn:',
       },
       projects: {
         eyebrow: 'MY CRAFT',
@@ -165,6 +166,7 @@ export class TranslationService {
         description:
           'Ich arbeite mit modernen Frontend-Technologien und bin immer offen dafür, neue Technologien zu lernen und meine Fähigkeiten zu verbessern.',
         peel: 'Zum Abziehen',
+        surprise: 'Möchte ich lernen:',
       },
       projects: {
         eyebrow: 'MEINE ARBEIT',

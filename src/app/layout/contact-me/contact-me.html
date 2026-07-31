@@ -118,7 +118,9 @@
   </section>
   <footer class="footer d-flex">
     <div class="column d-flex legal">
-      <a class="logo-footer" routerLink="/"><img class="footer-logo" src="assets/icons/logo.png" alt="logo image" /></a>
+      <a class="logo-footer" routerLink="/"
+        ><img class="footer-logo" src="assets/icons/logo.png" alt="logo image"
+      /></a>
       <p>&copy; Felix Winkler 2026</p>
       <a routerLink="/legal">Legal Notice</a>
     </div>
@@ -129,7 +131,7 @@
     </div>
   </footer>
 </section>
-<dialog #successDialog class="success-dialog">
+<dialog #successDialog class="success-dialog" (click)="onDialogClick($event)">
   <div class="success-content">
     <h3>{{ translationService.translate('contact.success.title') }}</h3>
     <p>{{ translationService.translate('contact.success.message') }}</p>

@@ -13,7 +13,7 @@ import { TranslationService } from '../../shared/services/translation.service';
 export class ContactMe {
   @ViewChild('successDialog') successDialog?: ElementRef<HTMLDialogElement>;
 
-  private readonly emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  private readonly emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
 
   fname: string = '';
   email: string = '';
@@ -29,7 +29,7 @@ export class ContactMe {
     fname: false,
     email: false,
     message: false,
-    policy: false
+    policy: false,
   };
 
   markTouched(field: string): void {
@@ -94,7 +94,6 @@ export class ContactMe {
     if (!this.isFormValid()) {
       return;
     }
-
     const payload = {
       name: this.fname,
       email: this.email,
@@ -114,7 +113,6 @@ export class ContactMe {
         return response.json();
       })
       .then((data) => {
-        console.log('Success:', data);
         this.fname = '';
         this.email = '';
         this.message = '';
@@ -123,7 +121,21 @@ export class ContactMe {
         this.successDialog?.nativeElement.showModal();
       })
       .catch((error) => {
-        console.error('Error:', error);
+        return;
       });
+  }
+
+  onDialogClick(event: MouseEvent) {
+    const dialogElement = this.successDialog?.nativeElement;
+    if (!dialogElement) return;
+    const rect = dialogElement.getBoundingClientRect();
+    const isClickOutside =
+      event.clientX < rect.left ||
+      event.clientX > rect.right ||
+      event.clientY < rect.top ||
+      event.clientY > rect.bottom;
+    if (isClickOutside) {
+      this.closeSuccessDialog();
+    }
   }
 }

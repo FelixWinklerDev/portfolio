@@ -183,15 +183,17 @@
 }
 
 dialog.success-dialog {
+  margin: auto;
   border: none;
   border-radius: 10px;
   padding: 0;
-  background: var(--transparence);
+  background: var(--requirement);
+  outline: none;
 }
 
 dialog.success-dialog::backdrop {
   background: rgba(0, 0, 0, 0.4);
-  filter: blur(1px);
+  backdrop-filter: blur(2px);
 }
 
 .success-content {
@@ -199,7 +201,7 @@ dialog.success-dialog::backdrop {
   color: var(--main_white);
   padding: 28px;
   width: 360px;
-  max-width: calc(100% - 48px);
+  max-width: calc(100vw - 48px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
   border-radius: 8px;
   text-align: center;

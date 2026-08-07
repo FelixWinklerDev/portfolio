@@ -75,4 +75,12 @@ export class ProjectDetails {
   isActiveLanguage(language: 'en' | 'de') {
     return this.translationService.getLanguage() === language;
   }
+
+  onLogoClick(): void {
+    this.close.emit();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
 }

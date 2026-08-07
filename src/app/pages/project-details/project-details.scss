@@ -94,7 +94,6 @@
 }
 
 .placeholder-container {
-  min-height: 230px;
   max-height: 230px;
 }
 
@@ -213,7 +212,7 @@
 }
 
 .back-btn {
-  color: var(--main_black);
+  color: var(--main_white);
   background-color: var(--transparence);
   height: 24px;
   mix-blend-mode: difference;
@@ -314,18 +313,12 @@
 
 @media (min-width: 1441px) {
   .project-detail-wrapper {
-    min-height: 135vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    gap: 120px;
-  }
-
-  .back-btn {
-    color: var(--main_white);
-    mix-blend-mode: difference;
   }
 
   .upper-center-btn {
@@ -441,10 +434,6 @@
   .center {
     align-items: center;
     justify-content: center;
-  }
-
-  .back-btn {
-    color: var(--main_white);
   }
 
   .project-preview {

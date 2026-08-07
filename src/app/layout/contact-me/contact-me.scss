@@ -6,9 +6,9 @@
   flex-direction: column;
 }
 
-.space-around {
+.space-between {
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .space {
@@ -416,7 +416,7 @@ dialog.success-dialog::backdrop {
   }
 
   .text-field {
-    width: 400px;
+    width: 100%;
   }
 
   .send-button:enabled,
@@ -437,7 +437,7 @@ dialog.success-dialog::backdrop {
     align-items: end;
   }
 
-  .space-around {
+  .space-between {
     justify-content: space-between;
     padding-top: 20px;
   }
@@ -459,10 +459,6 @@ dialog.success-dialog::backdrop {
     display: flex;
     width: 150px;
     height: 30px;
-  }
-
-  .text-field {
-    width: 320px;
   }
 
   .send-button:enabled,
@@ -498,10 +494,6 @@ dialog.success-dialog::backdrop {
     padding: 0 20px 180px;
   }
 
-  .text-field {
-    width: 100%;
-  }
-
   .policy-txt,
   .form {
     width: 80%;
@@ -518,8 +510,12 @@ dialog.success-dialog::backdrop {
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 320px) {
   .text-form-container {
     padding: 0 10px;
+  }
+
+  .right {
+    gap: 3px;
   }
 }

@@ -90,6 +90,19 @@ export class ContactMe {
     );
   }
 
+  private resetForm(): void {
+    this.fname = '';
+    this.email = '';
+    this.message = '';
+    this.policyCheck = false;
+    this.touchedFields = {
+      fname: false,
+      email: false,
+      message: false,
+      policy: false,
+    };
+  }
+
   submitForm(): void {
     if (!this.isFormValid()) {
       return;
@@ -113,10 +126,7 @@ export class ContactMe {
         return response.json();
       })
       .then((data) => {
-        this.fname = '';
-        this.email = '';
-        this.message = '';
-        this.policyCheck = false;
+        this.resetForm();
         this.cd.detectChanges();
         this.successDialog?.nativeElement.showModal();
       })

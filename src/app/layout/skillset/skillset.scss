@@ -88,7 +88,6 @@
 .paper-wrapper {
   height: 140px;
   width: auto;
-  min-width: 320px;
   max-width: 600px;
   padding-bottom: 50px;
 }
@@ -308,7 +307,7 @@
 @media (max-width: 440px) {
   .icon-wrapper {
     gap: 5px;
-    width: 320px;
+    width: 100%;
     flex: 1;
   }
 
@@ -321,14 +320,12 @@
 @media (max-width: 416px) {
   .paper-size {
     width: auto;
-    max-width: 360px;
+    max-width: 300px;
   }
 
   .paper-txt {
     font-size: 1.4rem;
     transform: translateY(-120px);
-    padding-left: 5px;
-    padding-right: 5px;
     max-width: 350px;
   }
 
@@ -340,25 +337,16 @@
   .peel-txt {
     width: 180px;
   }
-
-  .on-post-it {
-    transform: translate(-170px, -10px);
-    rotate: -3deg;
-  }
 }
 
 @media (max-width: 376px) {
   .paper-size {
-    width: 320px;
+    width: 300px;
   }
 
   .paper-txt {
     transform: translateY(-130px);
-    max-width: 300px;
-  }
-
-  .icon-wrapper {
-    width: 320px;
+    max-width: 280px;
   }
 
   .post-it {

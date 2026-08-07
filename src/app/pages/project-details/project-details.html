@@ -1,6 +1,6 @@
 <main class="project-detail-wrapper">
   <nav class="navbar d-flex">
-    <a routerLink="/"><img class="logo" src="assets/icons/logo.png" alt="logo" /></a>
+    <a (click)="onLogoClick()"><img class="logo" src="assets/icons/logo.png" alt="logo" /></a>
     <a class="about-me nav-link" href="#about">{{
       translationService.translate('header.nav.aboutMe')
     }}</a>

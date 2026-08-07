@@ -125,9 +125,7 @@
       <a routerLink="/legal">Legal Notice</a>
     </div>
     <div class="space-between d-flex">
-      <a href="https://github.com/FelixWinklerDev" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/felix-winkler-38947a365/" target="_blank">LinkedIn</a>
-      <a href="mailto:felixwinklerdev@gmail.com" target="_blank">Email</a>
+      <app-footer-btn *ngFor="let link of socialLinks" [data]="link"> </app-footer-btn>
     </div>
   </footer>
 </section>

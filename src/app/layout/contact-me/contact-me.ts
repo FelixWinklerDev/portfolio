@@ -3,14 +3,34 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../shared/services/translation.service';
+import { FooterBtn, FooterBtnData } from '../../shared/components/footer-btn/footer-btn';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [FormsModule, CommonModule, RouterLink],
+  imports: [FormsModule, CommonModule, RouterLink, FooterBtn],
   templateUrl: './contact-me.html',
   styleUrls: ['./contact-me.scss'],
 })
 export class ContactMe {
+
+  socialLinks: FooterBtnData[] = [
+    {
+      text: 'GitHub',
+      link: 'https://github.com/FelixWinklerDev',
+      pic: 'assets/icons/github-icon.png',
+    },
+    {
+      text: 'LinkedIn',
+      link: 'https://www.linkedin.com/in/felix-winkler-38947a365/',
+      pic: 'assets/icons/linkedin-icon.png',
+    },
+    {
+      text: 'E-mail',
+      link: 'mailto:felixwinklerdev@gmail.com',
+      pic: 'assets/icons/mail-icon.png',
+    },
+  ];
+
   @ViewChild('successDialog') successDialog?: ElementRef<HTMLDialogElement>;
 
   private readonly emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;

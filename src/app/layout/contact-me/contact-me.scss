@@ -428,6 +428,7 @@ dialog.success-dialog::backdrop {
 @media (max-width: 550px) {
   .footer {
     flex-direction: column;
+    padding: 0 20px 120px;
   }
 
   .legal {
@@ -439,7 +440,7 @@ dialog.success-dialog::backdrop {
 
   .space-between {
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 60px;
   }
 
   .footer-logo {
@@ -491,7 +492,7 @@ dialog.success-dialog::backdrop {
   }
 
   .footer {
-    padding: 0 20px 180px;
+    padding: 0 10px 180px;
   }
 
   .policy-txt,
@@ -507,6 +508,15 @@ dialog.success-dialog::backdrop {
 
   .sticker-container {
     padding: 0 0 0 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .space-between{
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
   }
 }
 

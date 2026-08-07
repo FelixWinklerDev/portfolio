@@ -1,0 +1,6 @@
+<div class="column">
+  <a class="social-btn" [href]="data.link" target="_blank" rel="noopener noreferrer">
+    <img *ngIf="data.pic" class="social-icon" [src]="data.pic" [alt]="data.alt || data.text" />
+    <span class="label label-default">{{ data.text }}</span>
+  </a>
+</div>

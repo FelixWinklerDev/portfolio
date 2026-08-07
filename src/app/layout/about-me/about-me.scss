@@ -2,7 +2,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 144px 0;
-  gap: 150px;
 }
 
 .right-bound {
@@ -20,6 +19,7 @@
 
 .paper-positioning {
   flex-direction: column;
+  transform: translate(-50px);
 }
 
 .paper-size {
@@ -80,7 +80,6 @@
 .text-position {
   flex-direction: column;
   justify-content: space-between;
-  transform: translateX(-150px);
 }
 
 .about-gap {
@@ -149,13 +148,11 @@
 
   .about-wrapper {
     flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 20px 0;
     gap: 12px;
-  }
-
-  .text-position {
-    padding-left: 280px;
   }
 
   .about-gap {
@@ -173,6 +170,10 @@
     align-items: center;
     justify-content: center;
     transform: translateX(-150px);
+  }
+
+  .text-position {
+    padding: 0 50px;
   }
 
   .orange {
@@ -215,10 +216,6 @@
     transform: translateX(-30px);
   }
 
-  .text-position {
-    transform: translateX(-130px);
-  }
-
   .blue,
   .yellow,
   .orange {
@@ -244,7 +241,7 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 475px) {
   .about-gap {
     width: 300px;
   }

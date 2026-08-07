@@ -1,0 +1,90 @@
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 100px;
+  padding: 12px 20px;
+  background: none;
+  color: var(--main_white);
+  overflow: visible;
+  z-index: 1;
+  white-space: nowrap;
+  max-width: 112px;
+  transition:
+    max-width 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 0.45s ease-out;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--highlight_blue);
+    z-index: -1;
+    border-radius: 100px;
+    clip-path: inset(0 100% 0 0);
+    transform-origin: left;
+    transition: clip-path 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  &:hover {
+    max-width: 112px;
+    text-decoration: none;
+    &::before {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+}
+
+.label {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.label-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.social-btn:hover .label-hover {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.social-icon {
+  position: absolute;
+  left: 70px;
+  top: -30px;
+  width: 30px;
+  height: auto;
+  opacity: 0;
+  transform: translateX(-70px) rotate(-280deg);
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.45s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.social-btn:hover .social-icon {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
